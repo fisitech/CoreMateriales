@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
   <asmv1:assemblyIdentity name="MaterialCore.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="AIazul.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="MaterialCore" version="1.0.5217.26428" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="MaterialCore" version="1.0.5378.22054" language="neutral" processorArchitecture="x86" />
     <commandLine file="MaterialCore.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -13,6 +13,21 @@
         <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
     </security>
   </trustInfo>
   <dependency>
@@ -30,11 +45,6 @@
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="ADODB" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -59,27 +69,22 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Vbe.Interop" version="14.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="office" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="office" version="14.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.Data.DataSetExtensions" version="3.5.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.Xml.Linq" version="3.5.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -95,26 +100,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.Office.dll" size="110592">
-      <assemblyIdentity name="Interop.Office" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.Microsoft.Office.Core.dll" size="409600">
+      <assemblyIdentity name="Interop.Microsoft.Office.Core" version="2.4.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>t5NDt0He6ukqwDM9NSHa6XC0uJ4=</dsig:DigestValue>
+        <dsig:DigestValue>XeQ7LnP6PkFTucPenQDiqP14ibA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialCore.exe" size="2093056">
-      <assemblyIdentity name="MaterialCore" version="1.0.5217.26428" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialCore.exe" size="2069504">
+      <assemblyIdentity name="MaterialCore" version="1.0.5378.22054" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xtNzU7zv/j3b4pibTXebk0W/Y/Q=</dsig:DigestValue>
+        <dsig:DigestValue>advEA+6o5NnEPkavmU43SY1gS+Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Office.Interop.Excel.dll" size="1276720">
+      <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>NEVCIGHkg/arl6UuCFNlxV9F4W0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -139,6 +156,30 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>KpCCyotSdssIDFZidzcGgNSPeOc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\System.Data.DataSetExtensions.resources.dll" size="5120">
+      <assemblyIdentity name="System.Data.DataSetExtensions.resources" version="3.5.0.0" publicKeyToken="B77A5C561934E089" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>a5FjG2nFmOhNt5O21FeXX/hA7og=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\System.Xml.Linq.resources.dll" size="8192">
+      <assemblyIdentity name="System.Xml.Linq.resources" version="3.5.0.0" publicKeyToken="B77A5C561934E089" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>sUhFvsqnQINXaF+4qgM2QClwbTU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -181,13 +222,13 @@
       <dsig:DigestValue>PxnZnZ/PwVr2+c9G/JT+VQQvuz0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MaterialCore.exe.config" size="2161">
+  <file name="MaterialCore.exe.config" size="2149">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>0c2TdZF9ZUXUIWQWGNOSTLzq+7g=</dsig:DigestValue>
+      <dsig:DigestValue>DJsaRT3O77oKzWdYjvIWDqsqG88=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\ai.ico" size="3262">
