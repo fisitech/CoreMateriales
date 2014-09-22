@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <!-- Max desc = 50 -->
+<!-- 37 permiso labinal -->
+	  <siteMapNode url="" title="Principal"  description="0">
+
+      <siteMapNode url="" title="Llegadas / Salidas Camiones"  description="0" >
+        <siteMapNode url="~/Default.aspx?mod=gb&amp;sub=ar" title="Control llegadas/salidas" description="5" />
+        <siteMapNode url="~/Default.aspx?mod=gb&amp;sub=trwt" title="Lista de Camiones en espera" description="5" />
+        <siteMapNode url="~/Default.aspx?mod=gb&amp;sub=lges" title="Listado general de llegadas/salidas" description="5" />
+      </siteMapNode>
+
+      <siteMapNode url="" title="Packing Lists"  description="0">
+        <siteMapNode url="~/Default.aspx?mod=pack&amp;sub=dis" title="Subir PDF" description="2" />
+      </siteMapNode>
+      
+      <!-- Despachos -->
+      <siteMapNode url="" title="Despachos"  description="0">
+        <siteMapNode url="~/Default.aspx?mod=des&amp;sub=nvo" title="Crear Despacho" description="2" />
+		<siteMapNode url="~/Default.aspx?mod=des&amp;sub=brr" title="Modificar Despacho" description="2" />
+      </siteMapNode>
+     
+      
+    <siteMapNode url="" title="Consulta de bienes en bodega" description="0">
+        <siteMapNode url="~/Default.aspx?mod=consul&amp;sub=paqueteria" title="Recibido por paqueteria" description="20" />
+		<siteMapNode url="~/Default.aspx?mod=consul&amp;sub=paqueteriaINBOUND" title="Recibido por paqueteria INBOUND" description="37" />
+		<siteMapNode url="~/Default.aspx?mod=consul&amp;sub=paqueteriaMateriales" title="Recibido por paqueteria Materiales" description="37" />
+		<siteMapNode url="~/Default.aspx?mod=consul&amp;sub=Incidencias" title="Incidencias" description="37" />
+		<siteMapNode url="~/Default.aspx?mod=consul&amp;sub=camion" title="Recibido por camión" description="21" />
+		<siteMapNode url="~/Default.aspx?mod=consul&amp;sub=newsku" title="Bultos y Paletas Derivados y Conformados" description="42"/>
+		<siteMapNode url="~/Default.aspx?mod=consul&amp;sub=trkshp" title="Consulta de Numero de Guia" description="46"/>
+        <siteMapNode url="~/Default.aspx?mod=pick&amp;sub=OC" title="Buscar OC Oracle" description="40" />
+	  </siteMapNode>
+
+		  <!--Reportes -->
+		  <siteMapNode url="" title="Reportes"  description="0" >					
+			  <siteMapNode url="" title="Transportistas"  description="0">
+				  <siteMapNode url="Default.aspx?mod=rep&amp;tipo=LlegadasBodega" title="Llegadas a la bodega"  description="5"/>
+			  </siteMapNode>
+			  <siteMapNode url="" title="Bultos"  description="0">
+				  <siteMapNode url="Default.aspx?mod=rep&amp;tipo=SkuArrivals" title="Recibos Paqueteria"  description="5"/>
+			  </siteMapNode>
+			  <siteMapNode url="Default.aspx?mod=rep&amp;tipo=users" title="Usuarios"  description="5"/>        
+		  </siteMapNode>
+	
+      <!-- Aministracion del sistema -->
+      <siteMapNode url="" title="Administración del sistema" description="0">
+        <siteMapNode url="" title="Usuarios" description="0">
+          <siteMapNode url="~/Default.aspx?mod=usu&amp;sub=alt" title="Alta" description="22" />
+          <siteMapNode url="~/Default.aspx?mod=usu&amp;sub=edt" title="Edición" description="23" />
+          <siteMapNode url="~/Default.aspx?mod=usu&amp;sub=camcve" title="Cambio de Contraseña" description="24" />
+        </siteMapNode>
+
+		  <siteMapNode url="" title="Numeros de Guia" description="0">
+			  <siteMapNode url="~/Default.aspx?mod=sku&amp;sub=edt" title="Control de Recorte" description="24" />
+		  </siteMapNode>
+		  
+        <siteMapNode url="" title="Clientes" description="0">
+          <siteMapNode url="~/Default.aspx?mod=clie&amp;sub=alt" title="Alta" description="25" />
+          <siteMapNode url="~/Default.aspx?mod=clie&amp;sub=edt" title="Edición" description="26" />
+        </siteMapNode>
+        <siteMapNode url="" title="Perfiles Usuario" description="0">
+          <siteMapNode url="~/Default.aspx?mod=per&amp;sub=reg&amp;mov=alt" title="Alta" description="27" />
+          <siteMapNode url="~/Default.aspx?mod=per&amp;sub=reg&amp;mov=edt" title="Edición" description="28" />          
+        </siteMapNode>
+        <siteMapNode url="" title="Catálogos" description="0">          
+          <siteMapNode url="" title="Tipo de pago" description="0">
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=bill&amp;mov=alt" title="Alta" description="31" />
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=bill&amp;mov=edt" title="Edición" description="32" />
+          </siteMapNode>
+          <siteMapNode url="" title="Tipo de movimiento" description="0">
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=move&amp;mov=alt" title="Alta" description="33" />
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=move&amp;mov=edt" title="Edición" description="34" />
+          </siteMapNode>
+          <siteMapNode url="" title="Transportistas" description="0">
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=carrier&amp;mov=alt" title="Alta" description="35" />
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=carrier&amp;mov=edt" title="Edición" description="36" />
+          </siteMapNode>
+          <siteMapNode url="" title="Tipos de transporte" description="0">
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=trantype&amp;mov=alt" title="Alta" description="38" />
+            <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=trantype&amp;mov=edt" title="Edición" description="39" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Default.aspx?mod=cat&amp;sub=order&amp;mov=alt" title="Ordernar Posiciones de Bodega" description="49" />
+      </siteMapNode>   
+  </siteMapNode>  
+ 
+</siteMap>

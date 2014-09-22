@@ -1,0 +1,17 @@
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\Twain\Twain\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\Twain\Twain\bin\Debug\Twain.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\Twain\Twain\bin\Debug\Twain.pdb
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\Twain\Twain\obj\Debug\Twain.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\Twain\Twain\obj\Debug\Twain.pdb
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\Twain\Twain\bin\Debug\PdfSharp.dll
+D:\GIt\TwainSimple\Twain\obj\Debug\ResolveAssemblyReference.cache
+D:\GIt\TwainSimple\Twain\obj\Debug\Twain.dll
+D:\GIt\TwainSimple\Twain\bin\Debug\Twain.dll
+D:\GIt\TwainSimple\Twain\bin\Debug\Twain.pdb
+D:\GIt\TwainSimple\Twain\obj\Debug\Twain.pdb
+D:\GIt\TwainSimple\Twain\obj\Release\ResolveAssemblyReference.cache
+D:\GIt\MaterialCore\TwainSimple\Twain\bin\Debug\Twain.dll
+D:\GIt\MaterialCore\TwainSimple\Twain\bin\Debug\Twain.pdb
+D:\GIt\MaterialCore\TwainSimple\Twain\obj\Debug\ResolveAssemblyReference.cache
+D:\GIt\MaterialCore\TwainSimple\Twain\obj\Debug\Twain.dll
+D:\GIt\MaterialCore\TwainSimple\Twain\obj\Debug\Twain.pdb

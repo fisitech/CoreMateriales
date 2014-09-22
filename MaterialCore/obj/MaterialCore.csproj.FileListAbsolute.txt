@@ -1,0 +1,432 @@
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Properties.Resources.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.csproj.GenerateResource.Cache
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\MaterialCore.exe
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\MaterialCore.pdb
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.exe
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.pdb
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\MaterialCore.exe.config
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Principal.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Login.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.ErrorConeccion.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.ImpCSV.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Quimicos.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.ReciboPO.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Embarques.resources
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\PdfSharp.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\Twain.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\Twain.pdb
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\Interop.Office.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.csproj.ResolveComReference.cache
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\Interop.Office.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\ClosedXML.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\NPOI.dll
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\bin\Debug\ClosedXML.xml
+C:\Documents and Settings\amedrano\My Documents\Visual Studio 2005\Projects\MaterialCore\MaterialCore\obj\Debug\MaterialCore.POActivos.resources
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\MaterialCore.exe.config
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.exe
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.pdb
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\MaterialCore.exe
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\MaterialCore.pdb
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\Interop.Microsoft.Office.Core.dll
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\ResolveAssemblyReference.cache
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\Interop.Microsoft.Office.Core.dll
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.csproj.ResolveComReference.cache
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.ErrorConeccion.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.ImpCSV.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Login.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.POActivos.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Principal.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Properties.Resources.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Quimicos.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.ReciboPO.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.csproj.GenerateResource.Cache
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.OrdenesCompra.NumerosParte.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Embarques.Embarques.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Embarques.CrearTarima.resources
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\PdfSharp.dll
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\Twain.dll
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.OrdenesCompra.EscanearPL.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Embarques.ModificacionEmbarque.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.ReciborMQ.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Embarques.RehacerTarima.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\ResolveAssemblyReference.cache
+D:\GIt\MaterialCore\MaterialCore\obj\Release\Interop.Microsoft.Office.Core.dll
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.csproj.ResolveComReference.cache
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.CrearTarima.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.Embarques.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.ModificacionEmbarque.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.RehacerTarima.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.ErrorConeccion.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Login.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.ReciborMQ.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPL.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.ImpCSV.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.NumerosParte.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.POActivos.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Principal.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Properties.Resources.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Quimicos.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.ReciboPO.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.csproj.GenerateResource.Cache
+D:\GIt\MaterialCore\MaterialCore\bin\Release\MaterialCore.exe.config
+D:\GIt\MaterialCore\MaterialCore\bin\Release\MaterialCore.exe
+D:\GIt\MaterialCore\MaterialCore\bin\Release\MaterialCore.pdb
+D:\GIt\MaterialCore\MaterialCore\bin\Release\PdfSharp.dll
+D:\GIt\MaterialCore\MaterialCore\bin\Release\Interop.Microsoft.Office.Core.dll
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.exe
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.pdb
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+D:\GIt\MaterialCore\MaterialCore\bin\Release\Resources\ai.ico
+D:\GIt\MaterialCore\MaterialCore\bin\Release\app.config
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\Resources\ai.ico
+D:\GIt\MaterialCore\MaterialCore\bin\Debug\app.config
+D:\GIt\MaterialCore\MaterialCore\obj\Debug\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.ITAR.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.Consignacion.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Detenidos.DetenidosForma.resources
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.Paises.resources
+D:\GIt\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-ADI.XLS
+D:\GIt\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-DC.XLS
+D:\GIt\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-MeQ.xls
+D:\GIt\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-PL.xls
+D:\GIt\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.EmbarquesEmbiados.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\MaterialCore.exe.config
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.exe
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.pdb
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\Interop.Microsoft.Office.Core.dll
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.csproj.ResolveComReference.cache
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.Consignacion.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.ITAR.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.Paises.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Detenidos.DetenidosForma.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.CrearTarima.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.Embarques.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.EmbarquesEmbiados.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.ModificacionEmbarque.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.RehacerTarima.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.ErrorConeccion.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Login.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.ReciborMQ.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPL.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.ImpCSV.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.POActivos.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Principal.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Properties.Resources.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Quimicos.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.ReciboPO.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.csproj.GenerateResource.Cache
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-ADI.XLS
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-DC.XLS
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-MeQ.xls
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-PL.xls
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\Resources\ai.ico
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\app.config
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\MaterialCore.exe
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\MaterialCore.pdb
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\bin\Release\Interop.Microsoft.Office.Core.dll
+C:\Documents and Settings\Erik Carrillo\Desktop\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.DatosComplementarios.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\MaterialCore.exe.config
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.exe
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.pdb
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\ResolveAssemblyReference.cache
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\Interop.Microsoft.Office.Core.dll
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.csproj.ResolveComReference.cache
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.Consignacion.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.ITAR.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Catalogos.Paises.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Detenidos.DetenidosForma.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.CrearTarima.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.Embarques.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.EmbarquesEmbiados.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.ModificacionEmbarque.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.RehacerTarima.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.ErrorConeccion.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Login.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.ReciborMQ.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Embarques.DatosComplementarios.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPL.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.ImpCSV.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.POActivos.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Principal.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Properties.Resources.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Quimicos.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.ReciboPO.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.csproj.GenerateResource.Cache
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-ADI.XLS
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-DC.XLS
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-MeQ.xls
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\Plantillas\Plantilla-PL.xls
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\Resources\ai.ico
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\app.config
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\MaterialCore.exe
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\MaterialCore.pdb
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\bin\Release\Interop.Microsoft.Office.Core.dll
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.form.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.NumClones.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.LineasPO.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Ventanas.Cargando.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Incidencias.MaterialDetenido.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPLInbound.resources
+D:\SourceSafe\American Industries\MaterialCore\MaterialCore\obj\Release\MaterialCore.Shipping.Shipping.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\MaterialCore.exe.config
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.exe
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.pdb
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-ADI.XLS
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-DC.XLS
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-MeQ.xls
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-PL.xls
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\Resources\ai.ico
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\app.config
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\MaterialCore.exe
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\MaterialCore.pdb
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Release\Interop.Office.dll
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\ResolveAssemblyReference.cache
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\Interop.Office.dll
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.csproj.ResolveComReference.cache
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Catalogos.Consignacion.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Catalogos.ITAR.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Catalogos.Paises.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Detenidos.DetenidosForma.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.CrearTarima.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.Embarques.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.EmbarquesEmbiados.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.ModificacionEmbarque.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.RehacerTarima.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.ErrorConeccion.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Incidencias.MaterialDetenido.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Login.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.form.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.LineasPO.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.NumClones.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.ReciborMQ.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.DatosComplementarios.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPL.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPLInbound.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.ImpCSV.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.POActivos.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Principal.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Properties.Resources.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Quimicos.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.ReciboPO.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Shipping.Shipping.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Ventanas.Cargando.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.csproj.GenerateResource.Cache
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Incidencias.MaterialDanado.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Zodiac.frmEnvio.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Zodiac.frmRecepcion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\MaterialCore.exe.config
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.exe
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.pdb
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-ADI.XLS
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-DC.XLS
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-MeQ.xls
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\Plantillas\Plantilla-PL.xls
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\Resources\ai.ico
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\app.config
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\MaterialCore.exe
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\MaterialCore.pdb
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\bin\Release\Interop.Office.dll
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\Interop.Office.dll
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Catalogos.Consignacion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Catalogos.ITAR.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Catalogos.Paises.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Detenidos.DetenidosForma.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.CrearTarima.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.Embarques.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.EmbarquesEmbiados.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.ModificacionEmbarque.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.RehacerTarima.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.ErrorConeccion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Incidencias.MaterialDanado.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Incidencias.MaterialDetenido.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Login.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.form.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.LineasPO.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.NumClones.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.ReciborMQ.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Embarques.DatosComplementarios.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPL.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPLInbound.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.ImpCSV.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.POActivos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Principal.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Quimicos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.ReciboPO.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Shipping.Shipping.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Ventanas.Cargando.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Zodiac.frmEnvio.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.Zodiac.frmRecepcion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales\MaterialCore\obj\Release\MaterialCore.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\MaterialCore.exe.config
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.exe
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.pdb
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\Plantillas\Plantilla-ADI.XLS
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\Plantillas\Plantilla-DC.XLS
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\Plantillas\Plantilla-MeQ.xls
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\Plantillas\Plantilla-PL.xls
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\Resources\ai.ico
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\app.config
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\MaterialCore.exe
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\MaterialCore.pdb
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Release\Interop.Office.dll
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\Interop.Office.dll
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Catalogos.Consignacion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Catalogos.ITAR.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Catalogos.Paises.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Detenidos.DetenidosForma.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Embarques.CrearTarima.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Embarques.Embarques.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Embarques.EmbarquesEmbiados.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Embarques.ModificacionEmbarque.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Embarques.RehacerTarima.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.ErrorConeccion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Incidencias.MaterialDanado.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Incidencias.MaterialDetenido.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Login.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.form.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.LineasPO.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.NumClones.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.MaterialesMQ.ReciborMQ.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Embarques.DatosComplementarios.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPL.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.OrdenesCompra.EscanearPLInbound.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.ImpCSV.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.POActivos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Principal.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Quimicos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.ReciboPO.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Shipping.Shipping.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Ventanas.Cargando.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Zodiac.frmEnvio.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.Zodiac.frmRecepcion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Release\MaterialCore.MaterialesEmbarques.MaterialesEmbarques.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\MaterialCore.exe.config
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.exe
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.pdb
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\Interop.Office.dll
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Catalogos.Consignacion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Catalogos.ITAR.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Catalogos.Paises.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Configura.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Detenidos.DetenidosForma.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Embarques.CrearTarima.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Embarques.Embarques.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Embarques.EmbarquesEmbiados.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Embarques.ModificacionEmbarque.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Embarques.RehacerTarima.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.ErrorConeccion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Incidencias.MaterialDanado.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Incidencias.MaterialDetenido.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Login.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.MaterialesEmbarques.MaterialesEmbarques.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.form.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.LineasPO.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.NumClones.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.ReciborMQ.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Embarques.DatosComplementarios.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.OrdenesCompra.EscanearPL.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.OrdenesCompra.EscanearPLInbound.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.ImpCSV.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.POActivos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Principal.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Quimicos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.ReciboPO.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Shipping.Shipping.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Ventanas.Cargando.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Zodiac.frmEnvio.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.Zodiac.frmRecepcion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\Plantillas\Plantilla-ADI.XLS
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\Plantillas\Plantilla-DC.XLS
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\Plantillas\Plantilla-MeQ.xls
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\Plantillas\Plantilla-PL.xls
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\Resources\ai.ico
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\app.config
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\MaterialCore.exe
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\MaterialCore.pdb
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\Interop.Office.dll
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\MaterialCore.exe.manifest
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\bin\Debug\MaterialCore.application
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.exe.manifest
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.application
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.Recepcion.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.AddCommts.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.EscanearTN.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.EscanearTNInbound.resources
+C:\Documents and Settings\Administrator\Desktop\AALVAREZ\CoreMateriales_\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.CapturaBultos.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\MaterialCore.exe.config
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.exe
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.pdb
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\Plantillas\Plantilla-ADI.XLS
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\Plantillas\Plantilla-DC.XLS
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\Plantillas\Plantilla-MeQ.xls
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\Plantillas\Plantilla-PL.xls
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\Resources\ai.ico
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\app.config
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\MaterialCore.exe.manifest
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\MaterialCore.application
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\MaterialCore.exe
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\MaterialCore.pdb
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\bin\Debug\Interop.Office.dll
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\ResolveAssemblyReference.cache
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\Interop.Office.dll
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.csproj.ResolveComReference.cache
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Catalogos.Consignacion.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Catalogos.ITAR.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Catalogos.Paises.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Configura.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Detenidos.DetenidosForma.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.AddCommts.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.EscanearTN.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.EscanearTNInbound.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.EmbarquesZodiac.Recepcion.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Embarques.CrearTarima.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Embarques.Embarques.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Embarques.EmbarquesEmbiados.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Embarques.ModificacionEmbarque.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Embarques.RehacerTarima.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.ErrorConeccion.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Incidencias.MaterialDanado.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Incidencias.MaterialDetenido.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Login.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.MaterialesEmbarques.MaterialesEmbarques.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.form.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.LineasPO.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.NumClones.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.MaterialesMQ.ReciborMQ.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Embarques.DatosComplementarios.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.OrdenesCompra.EscanearPL.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.OrdenesCompra.EscanearPLInbound.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.ImpCSV.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.POActivos.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Principal.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Properties.Resources.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Quimicos.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.ReciboPO.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Reports.Bundles.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Shipping.Shipping.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Ventanas.Cargando.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Ventanas.EmbarquesAbiertos.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Zodiac.frmEnvio.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.Zodiac.frmRecepcion.resources
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.csproj.GenerateResource.Cache
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.exe.manifest
+D:\SourceSafe\DesktopSystems\CoreMateriales\MaterialCore\obj\Debug\MaterialCore.application

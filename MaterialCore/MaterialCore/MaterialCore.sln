@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialCore", "MaterialCore\MaterialCore.csproj", "{BA61BB7D-72E9-44EF-99B9-69CA5E674A1B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CoreMaterialesSetup", "CoreMaterialesSetup\CoreMaterialesSetup.vdproj", "{31F196A7-1FA4-4D91-A030-94B881D1C7CC}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CoreMaterialesSetup\\CoreMaterialesSetup.vdproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = CoreMaterialesSetup\\
+		SccProjectUniqueName2 = MaterialCore\\MaterialCore.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = MaterialCore\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA61BB7D-72E9-44EF-99B9-69CA5E674A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA61BB7D-72E9-44EF-99B9-69CA5E674A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA61BB7D-72E9-44EF-99B9-69CA5E674A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA61BB7D-72E9-44EF-99B9-69CA5E674A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F196A7-1FA4-4D91-A030-94B881D1C7CC}.Debug|Any CPU.ActiveCfg = Debug
+		{31F196A7-1FA4-4D91-A030-94B881D1C7CC}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

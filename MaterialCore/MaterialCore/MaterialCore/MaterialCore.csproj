@@ -1,0 +1,563 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA61BB7D-72E9-44EF-99B9-69CA5E674A1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaterialCore</RootNamespace>
+    <AssemblyName>MaterialCore</AssemblyName>
+    <ApplicationIcon>AIazul.ico</ApplicationIcon>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.65.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="NPOI, Version=1.2.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Twain\Twain\bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Erik Carrillo\Desktop\Twain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Catalogos\Consignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Consignacion.Designer.cs">
+      <DependentUpon>Consignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\ITAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\ITAR.Designer.cs">
+      <DependentUpon>ITAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Paises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Paises.Designer.cs">
+      <DependentUpon>Paises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Bitacora.cs" />
+    <Compile Include="Clases\Bultos.cs" />
+    <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Logueado.cs" />
+    <Compile Include="Clases\MeQExcel.cs" />
+    <Compile Include="Clases\Excel2.cs" />
+    <Compile Include="Clases\ExportarTXT.cs" />
+    <Compile Include="Clases\GuardaDatosComplementarios.cs" />
+    <Compile Include="Clases\MaterialesMQ.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Clases\Validar.cs" />
+    <Compile Include="DataSets\Bitacora.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bitacora.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Catalogos.cs">
+      <DependentUpon>Catalogos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\Catalogos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Catalogos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Embarques.cs">
+      <DependentUpon>Embarques.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\Embarques.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Embarques.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Incidencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incidencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Maquinaria.cs">
+      <DependentUpon>Maquinaria.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\Maquinaria.designer.cs">
+      <DependentUpon>Maquinaria.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataSets\Quimicos.cs">
+      <DependentUpon>Quimicos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\Quimicos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quimicos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Detenidos\Detenidos.cs" />
+    <Compile Include="Detenidos\DetenidosForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detenidos\DetenidosForma.Designer.cs">
+      <DependentUpon>DetenidosForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Embarques\CrearTarima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarques\CrearTarima.Designer.cs">
+      <DependentUpon>CrearTarima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Embarques\Embarques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarques\Embarques.Designer.cs">
+      <DependentUpon>Embarques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Embarques\EmbarquesEmbiados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarques\EmbarquesEmbiados.Designer.cs">
+      <DependentUpon>EmbarquesEmbiados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Embarques\ModificacionEmbarque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarques\ModificacionEmbarque.Designer.cs">
+      <DependentUpon>ModificacionEmbarque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Embarques\RehacerTarima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarques\RehacerTarima.Designer.cs">
+      <DependentUpon>RehacerTarima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorConeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorConeccion.designer.cs">
+      <DependentUpon>ErrorConeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencias\MaterialDanado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Incidencias\MaterialDanado.Designer.cs">
+      <DependentUpon>MaterialDanado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencias\MaterialDetenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Incidencias\MaterialDetenido.Designer.cs">
+      <DependentUpon>MaterialDetenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialesMQ\CrearArchivosMQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialesMQ\CrearArchivosMQ.Designer.cs">
+      <DependentUpon>CrearArchivosMQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialesMQ\LineasPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialesMQ\LineasPO.Designer.cs">
+      <DependentUpon>LineasPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialesMQ\NumClones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialesMQ\NumClones.Designer.cs">
+      <DependentUpon>NumClones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialesMQ\ReciborMQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialesMQ\ReciborMQ.Designer.cs">
+      <DependentUpon>ReciborMQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialesOC\MaterialesExcelOC.cs" />
+    <Compile Include="OrdenesCompra\DatosComplementarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompra\DatosComplementarios.designer.cs">
+      <DependentUpon>DatosComplementarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesCompra\EscanearPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompra\EscanearPL.designer.cs">
+      <DependentUpon>EscanearPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesCompra\EscanearPLInbound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompra\EscanearPLInbound.Designer.cs">
+      <DependentUpon>EscanearPLInbound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesCompra\ImpCSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompra\ImpCSV.designer.cs">
+      <DependentUpon>ImpCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesCompra\POActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompra\POActivos.Designer.cs">
+      <DependentUpon>POActivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Catalogos\Consignacion.resx">
+      <DependentUpon>Consignacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\ITAR.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ITAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Paises.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Paises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detenidos\DetenidosForma.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetenidosForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarques\CrearTarima.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrearTarima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarques\Embarques.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Embarques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarques\EmbarquesEmbiados.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmbarquesEmbiados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarques\ModificacionEmbarque.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModificacionEmbarque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarques\RehacerTarima.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RehacerTarima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorConeccion.resx">
+      <DependentUpon>ErrorConeccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Incidencias\MaterialDanado.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialDanado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Incidencias\MaterialDetenido.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialDetenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialesMQ\CrearArchivosMQ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrearArchivosMQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialesMQ\LineasPO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LineasPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialesMQ\NumClones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NumClones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialesMQ\ReciborMQ.resx">
+      <DependentUpon>ReciborMQ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesCompra\DatosComplementarios.resx">
+      <DependentUpon>DatosComplementarios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesCompra\EscanearPL.resx">
+      <DependentUpon>EscanearPL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesCompra\EscanearPLInbound.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EscanearPLInbound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesCompra\ImpCSV.resx">
+      <DependentUpon>ImpCSV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesCompra\POActivos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>POActivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Quimicos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Quimicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesCompra\ReciboPO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReciboPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\Shipping.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Shipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Cargando.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\EmbarquesAbiertos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmbarquesAbiertos.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Catalogos\Quimicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Quimicos.Designer.cs">
+      <DependentUpon>Quimicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesCompra\ReciboPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompra\ReciboPO.Designer.cs">
+      <DependentUpon>ReciboPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\Shipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\Shipping.Designer.cs">
+      <DependentUpon>Shipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Cargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Cargando.Designer.cs">
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\EmbarquesAbiertos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\EmbarquesAbiertos.Designer.cs">
+      <DependentUpon>EmbarquesAbiertos.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ai.ico" />
+    <Content Include="AIazul.ico" />
+    <Content Include="Config.xml" />
+    <None Include="DataSets\Bitacora.xsc">
+      <DependentUpon>Bitacora.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Bitacora.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bitacora.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Bitacora.xss">
+      <DependentUpon>Bitacora.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Catalogos.xsc">
+      <DependentUpon>Catalogos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Catalogos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Catalogos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\Catalogos.xss">
+      <DependentUpon>Catalogos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Embarques.xsc">
+      <DependentUpon>Embarques.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Embarques.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Embarques.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Embarques.xss">
+      <DependentUpon>Embarques.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Incidencias.xsc">
+      <DependentUpon>Incidencias.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Incidencias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Incidencias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Incidencias.xss">
+      <DependentUpon>Incidencias.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Maquinaria.xsc">
+      <DependentUpon>Maquinaria.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Maquinaria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Maquinaria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\Maquinaria.xss">
+      <DependentUpon>Maquinaria.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Quimicos.xsc">
+      <DependentUpon>Quimicos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Quimicos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Quimicos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Quimicos.xss">
+      <DependentUpon>Quimicos.xsd</DependentUpon>
+    </None>
+    <None Include="Plantillas\Plantilla-ADI.XLS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Plantillas\Plantilla-DC.XLS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Plantillas\Plantilla-MeQ.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Plantillas\Plantilla-PL.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\impCSV.bmp" />
+    <None Include="Resources\exebase.png" />
+    <Content Include="Resources\ai.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\logo AIa.jpg" />
+    <Content Include="Resources\quimico.bmp" />
+    <None Include="Resources\untitled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="recibo_por_paqueteria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ncliente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recibo_por_paqueteriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recibo_por_paqueteriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recibo_por_paqueteria_materiales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ncliente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoParte" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recibo_por_paqueteria_materialesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recibo_por_paqueteria_materialesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recibo_por_paqueteria_materialesINBOUND">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recibo_por_paqueteria_materialesINBOUNDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recibo_por_paqueteria_materialesINBOUNDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incidencias">
+        <s:complexType />
+      </s:element>
+      <s:element name="IncidenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncidenciasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrintDuplicateTag">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPrintDuplicateTagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrintDuplicateTagResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertQueuePrintDuplicateTag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_reporte" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_barras" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="impresiora" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertQueuePrintDuplicateTagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertQueuePrintDuplicateTagResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveQueuePrintDuplicateTag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_barras" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveQueuePrintDuplicateTagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemoveQueuePrintDuplicateTagResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveQueuePrintByPrinter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="impresora" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveQueuePrintByPrinterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemoveQueuePrintByPrinterResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="recibo_por_paqueteriaSoapIn">
+    <wsdl:part name="parameters" element="tns:recibo_por_paqueteria" />
+  </wsdl:message>
+  <wsdl:message name="recibo_por_paqueteriaSoapOut">
+    <wsdl:part name="parameters" element="tns:recibo_por_paqueteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="recibo_por_paqueteria_materialesSoapIn">
+    <wsdl:part name="parameters" element="tns:recibo_por_paqueteria_materiales" />
+  </wsdl:message>
+  <wsdl:message name="recibo_por_paqueteria_materialesSoapOut">
+    <wsdl:part name="parameters" element="tns:recibo_por_paqueteria_materialesResponse" />
+  </wsdl:message>
+  <wsdl:message name="recibo_por_paqueteria_materialesINBOUNDSoapIn">
+    <wsdl:part name="parameters" element="tns:recibo_por_paqueteria_materialesINBOUND" />
+  </wsdl:message>
+  <wsdl:message name="recibo_por_paqueteria_materialesINBOUNDSoapOut">
+    <wsdl:part name="parameters" element="tns:recibo_por_paqueteria_materialesINBOUNDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncidenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:Incidencias" />
+  </wsdl:message>
+  <wsdl:message name="IncidenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:IncidenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrintDuplicateTagSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrintDuplicateTag" />
+  </wsdl:message>
+  <wsdl:message name="GetPrintDuplicateTagSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrintDuplicateTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertQueuePrintDuplicateTagSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertQueuePrintDuplicateTag" />
+  </wsdl:message>
+  <wsdl:message name="InsertQueuePrintDuplicateTagSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertQueuePrintDuplicateTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveQueuePrintDuplicateTagSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveQueuePrintDuplicateTag" />
+  </wsdl:message>
+  <wsdl:message name="RemoveQueuePrintDuplicateTagSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveQueuePrintDuplicateTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveQueuePrintByPrinterSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveQueuePrintByPrinter" />
+  </wsdl:message>
+  <wsdl:message name="RemoveQueuePrintByPrinterSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveQueuePrintByPrinterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="paqueteriaSoap">
+    <wsdl:operation name="recibo_por_paqueteria">
+      <wsdl:input message="tns:recibo_por_paqueteriaSoapIn" />
+      <wsdl:output message="tns:recibo_por_paqueteriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="recibo_por_paqueteria_materiales">
+      <wsdl:input message="tns:recibo_por_paqueteria_materialesSoapIn" />
+      <wsdl:output message="tns:recibo_por_paqueteria_materialesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="recibo_por_paqueteria_materialesINBOUND">
+      <wsdl:input message="tns:recibo_por_paqueteria_materialesINBOUNDSoapIn" />
+      <wsdl:output message="tns:recibo_por_paqueteria_materialesINBOUNDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incidencias">
+      <wsdl:input message="tns:IncidenciasSoapIn" />
+      <wsdl:output message="tns:IncidenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintDuplicateTag">
+      <wsdl:input message="tns:GetPrintDuplicateTagSoapIn" />
+      <wsdl:output message="tns:GetPrintDuplicateTagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertQueuePrintDuplicateTag">
+      <wsdl:input message="tns:InsertQueuePrintDuplicateTagSoapIn" />
+      <wsdl:output message="tns:InsertQueuePrintDuplicateTagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQueuePrintDuplicateTag">
+      <wsdl:input message="tns:RemoveQueuePrintDuplicateTagSoapIn" />
+      <wsdl:output message="tns:RemoveQueuePrintDuplicateTagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQueuePrintByPrinter">
+      <wsdl:input message="tns:RemoveQueuePrintByPrinterSoapIn" />
+      <wsdl:output message="tns:RemoveQueuePrintByPrinterSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="paqueteriaSoap" type="tns:paqueteriaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="recibo_por_paqueteria">
+      <soap:operation soapAction="http://tempuri.org/recibo_por_paqueteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recibo_por_paqueteria_materiales">
+      <soap:operation soapAction="http://tempuri.org/recibo_por_paqueteria_materiales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recibo_por_paqueteria_materialesINBOUND">
+      <soap:operation soapAction="http://tempuri.org/recibo_por_paqueteria_materialesINBOUND" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incidencias">
+      <soap:operation soapAction="http://tempuri.org/Incidencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintDuplicateTag">
+      <soap:operation soapAction="http://tempuri.org/GetPrintDuplicateTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertQueuePrintDuplicateTag">
+      <soap:operation soapAction="http://tempuri.org/InsertQueuePrintDuplicateTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQueuePrintDuplicateTag">
+      <soap:operation soapAction="http://tempuri.org/RemoveQueuePrintDuplicateTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQueuePrintByPrinter">
+      <soap:operation soapAction="http://tempuri.org/RemoveQueuePrintByPrinter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="paqueteriaSoap12" type="tns:paqueteriaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="recibo_por_paqueteria">
+      <soap12:operation soapAction="http://tempuri.org/recibo_por_paqueteria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recibo_por_paqueteria_materiales">
+      <soap12:operation soapAction="http://tempuri.org/recibo_por_paqueteria_materiales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recibo_por_paqueteria_materialesINBOUND">
+      <soap12:operation soapAction="http://tempuri.org/recibo_por_paqueteria_materialesINBOUND" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incidencias">
+      <soap12:operation soapAction="http://tempuri.org/Incidencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintDuplicateTag">
+      <soap12:operation soapAction="http://tempuri.org/GetPrintDuplicateTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertQueuePrintDuplicateTag">
+      <soap12:operation soapAction="http://tempuri.org/InsertQueuePrintDuplicateTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQueuePrintDuplicateTag">
+      <soap12:operation soapAction="http://tempuri.org/RemoveQueuePrintDuplicateTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQueuePrintByPrinter">
+      <soap12:operation soapAction="http://tempuri.org/RemoveQueuePrintByPrinter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="paqueteria">
+    <wsdl:port name="paqueteriaSoap" binding="tns:paqueteriaSoap">
+      <soap:address location="http://localhost:8080/WSCORE/paqueteria.asmx" />
+    </wsdl:port>
+    <wsdl:port name="paqueteriaSoap12" binding="tns:paqueteriaSoap12">
+      <soap12:address location="http://localhost:8080/WSCORE/paqueteria.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
