@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <appSettings>
-    <connectionStrings>
-      <add key="coreConnectionString" value="Data Source=192.168.1.11;Initial Catalog=core_v2;Persist Security Info=True;User ID=sa; Password=Pa$$w0rd2010"/>
-	</connectionStrings>
-	  <Updater nombre="CoreMobilV2.exe" urlDescarga="http://192.168.1.33/wscore/download"/>
-  </appSettings>
-</configuration>
