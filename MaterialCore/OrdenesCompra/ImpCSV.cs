@@ -121,7 +121,7 @@ namespace MaterialCore
                 tslblEstado.Text = "Leyendo archivo de Excel.";
                 statusStrip1.Refresh();
                 ExcelProvider provider = new ExcelProvider(dir,70);
-                DataTable registrosExcel = provider.GetWorkSheet("Sheet1");
+                DataTable registrosExcel = provider.GetWorkSheet("Open PO"); //cambio carlos el nombre de la hoja
                 Barra.Value = 65;
 
                 tslblEstado.Text = "Actualizando Base de datos.";
@@ -159,7 +159,8 @@ namespace MaterialCore
                 tslblEstado.Text = "Leyendo archivo de Excel.";
                 statusStrip1.Refresh();
                 ExcelProvider provider = new ExcelProvider(dir, 70);
-                DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
+                DataTable registrosExcel = provider.GetWorkSheetMeQ("ME2N");
+                //DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
                 Barra.Value = 65;
 
                 tslblEstado.Text = "Actualizando Base de datos.";
@@ -201,96 +202,93 @@ namespace MaterialCore
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MaterialCore.Properties.Settings.CoreConnectionString"].ConnectionString;
 
-            using (SqlConnection destinationConnection =
-                   new SqlConnection(connectionString))
+            using (SqlConnection destinationConnection =new SqlConnection(connectionString))
             {
                 destinationConnection.Open();
 
-                using (SqlBulkCopy bulkCopy =
-                           new SqlBulkCopy(destinationConnection))
+                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(destinationConnection))
                 {
-                    bulkCopy.DestinationTableName =
-                        Tabla;
+                    bulkCopy.DestinationTableName = Tabla;
 
                     SqlBulkCopyColumnMapping mapID =
-                        new SqlBulkCopyColumnMapping("PORD", "Id");
+                        new SqlBulkCopyColumnMapping(" PO  Number", "Id");//int hay valores ke no caben en int ej 4500016208
                     bulkCopy.ColumnMappings.Add(mapID);
 
                     SqlBulkCopyColumnMapping mapClienteId =
-                        new SqlBulkCopyColumnMapping("IDCTE", "ClienteId");
+                        new SqlBulkCopyColumnMapping("ClienteId", "ClienteId");//int
                     bulkCopy.ColumnMappings.Add(mapClienteId);
 
                     SqlBulkCopyColumnMapping mapRenglonId =
-                        new SqlBulkCopyColumnMapping("PLINE", "RenglonId");
+                        new SqlBulkCopyColumnMapping("Item", "RenglonId");//int
                     bulkCopy.ColumnMappings.Add(mapRenglonId);
 
                     SqlBulkCopyColumnMapping mapNumeroParte =
-                        new SqlBulkCopyColumnMapping("PPROD", "NumeroParte");
+                        new SqlBulkCopyColumnMapping("Material", "NumeroParte");
                     bulkCopy.ColumnMappings.Add(mapNumeroParte);
 
                     SqlBulkCopyColumnMapping mapDescripcion =
-                        new SqlBulkCopyColumnMapping("PODESC", "Descripcion");
+                        new SqlBulkCopyColumnMapping("Material Description", "Descripcion");
                     bulkCopy.ColumnMappings.Add(mapDescripcion);
 
                     SqlBulkCopyColumnMapping mapCantidad =
-                        new SqlBulkCopyColumnMapping("PQORD", "Cantidad");
+                        new SqlBulkCopyColumnMapping("Quantity Ordered", "Cantidad");//numeric
                     bulkCopy.ColumnMappings.Add(mapCantidad);
 
                     SqlBulkCopyColumnMapping mapPqOrd =
-                        new SqlBulkCopyColumnMapping("PQORD", "PqOrd");
+                        new SqlBulkCopyColumnMapping("Quantity Ordered", "PqOrd");//numeric
                     bulkCopy.ColumnMappings.Add(mapPqOrd);
 
                     SqlBulkCopyColumnMapping mapPqRec =
-                    new SqlBulkCopyColumnMapping("PQREC", "PqRec");
+                    new SqlBulkCopyColumnMapping("Quantity to be delivered", "PqRec");//numeric
                     bulkCopy.ColumnMappings.Add(mapPqRec);
 
                     SqlBulkCopyColumnMapping mapPrecio =
-                        new SqlBulkCopyColumnMapping("PECST", "Precio");
+                        new SqlBulkCopyColumnMapping(" Std Cost", "Precio"); //numeric
                     bulkCopy.ColumnMappings.Add(mapPrecio);
                     
                     SqlBulkCopyColumnMapping mapProveedor =
-                    new SqlBulkCopyColumnMapping("PVEND", "ProveedorID");
+                    new SqlBulkCopyColumnMapping("Vendor", "ProveedorID");
                     bulkCopy.ColumnMappings.Add(mapProveedor);
 
                     SqlBulkCopyColumnMapping mapNombreProveedor =
-                    new SqlBulkCopyColumnMapping("VNDNAM", "NombreProveedor");
+                    new SqlBulkCopyColumnMapping("Vendor Name", "NombreProveedor");
                     bulkCopy.ColumnMappings.Add(mapNombreProveedor);
 
-                    SqlBulkCopyColumnMapping mapDescripcion_P =
-                        new SqlBulkCopyColumnMapping("IDESC", "Descripcion_P");
-                    bulkCopy.ColumnMappings.Add(mapDescripcion_P);
+                    //SqlBulkCopyColumnMapping mapDescripcion_P =
+                    //    new SqlBulkCopyColumnMapping("IDESC", "Descripcion_P");
+                    //bulkCopy.ColumnMappings.Add(mapDescripcion_P);
 
                     SqlBulkCopyColumnMapping mapUnidadMedida =
-                        new SqlBulkCopyColumnMapping("PUM", "UnidadMedida");
+                        new SqlBulkCopyColumnMapping("PO UoM", "UnidadMedida");
                     bulkCopy.ColumnMappings.Add(mapUnidadMedida);
 
-                    SqlBulkCopyColumnMapping mapFacturaProveedor =
-                        new SqlBulkCopyColumnMapping("HVDUE", "FacturaProveedor");
-                    bulkCopy.ColumnMappings.Add(mapFacturaProveedor);
+                    //SqlBulkCopyColumnMapping mapFacturaProveedor =
+                    //    new SqlBulkCopyColumnMapping("HVDUE", "FacturaProveedor");
+                    //bulkCopy.ColumnMappings.Add(mapFacturaProveedor);
 
-                    SqlBulkCopyColumnMapping mapPais =
-                        new SqlBulkCopyColumnMapping("VCOUN", "Pais");
-                    bulkCopy.ColumnMappings.Add(mapPais);
+                    //SqlBulkCopyColumnMapping mapPais =
+                    //    new SqlBulkCopyColumnMapping("VCOUN", "Pais");
+                    //bulkCopy.ColumnMappings.Add(mapPais);
 
                     SqlBulkCopyColumnMapping mapPlanta =
-                        new SqlBulkCopyColumnMapping("PWHSE", "Planta");
+                        new SqlBulkCopyColumnMapping("Plant", "Planta");
                     bulkCopy.ColumnMappings.Add(mapPlanta);
 
                     SqlBulkCopyColumnMapping mapMoneda =
-                        new SqlBulkCopyColumnMapping("POCUR", "Moneda");
+                        new SqlBulkCopyColumnMapping("Currency", "Moneda");
                     bulkCopy.ColumnMappings.Add(mapMoneda);
 
-                    SqlBulkCopyColumnMapping mapProgramaId =
-                        new SqlBulkCopyColumnMapping("ICCOM", "ProgramaId");
-                    bulkCopy.ColumnMappings.Add(mapProgramaId);
+                    //SqlBulkCopyColumnMapping mapProgramaId =
+                    //    new SqlBulkCopyColumnMapping("ICCOM", "ProgramaId");
+                    //bulkCopy.ColumnMappings.Add(mapProgramaId);
 
-                    SqlBulkCopyColumnMapping mapDrawingId =
-                        new SqlBulkCopyColumnMapping("IDRAW", "DrawingId");
-                    bulkCopy.ColumnMappings.Add(mapDrawingId);
+                    //SqlBulkCopyColumnMapping mapDrawingId =
+                    //    new SqlBulkCopyColumnMapping("IDRAW", "DrawingId");
+                    //bulkCopy.ColumnMappings.Add(mapDrawingId);
 
-                    SqlBulkCopyColumnMapping mapText1 =
-                        new SqlBulkCopyColumnMapping("TEXT1", "Text1");
-                    bulkCopy.ColumnMappings.Add(mapText1);
+                    //SqlBulkCopyColumnMapping mapText1 =
+                    //    new SqlBulkCopyColumnMapping("TEXT1", "Text1");
+                    //bulkCopy.ColumnMappings.Add(mapText1);
 
                     try
                     {
@@ -298,7 +296,7 @@ namespace MaterialCore
                     }
                     catch (Exception ex)
                     {
-
+                        MessageBox.Show(ex.Message.ToString());
                     }
                     finally
                     {
@@ -411,7 +409,7 @@ namespace MaterialCore
                     }
                     catch (Exception ex)
                     {
-
+                        MessageBox.Show(ex.Message.ToString());
                     }
                     finally
                     {
@@ -714,7 +712,7 @@ namespace MaterialCore
         /// </summary>
 
         //private const string ConnectionStringTemplate = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties=Excel 8.0;";
-        private const string ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\'Excel 8.0;HDR=Yes;IMEX=1\'";
+        private const string ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\'Excel 12.0 Xml;HDR=Yes;IMEX=1\'";
 
         /// <summary>
         /// Default constructor
@@ -737,11 +735,12 @@ namespace MaterialCore
             string connectionString = string.Format(ConnectionStringTemplate, FileName);
 
             // Query the specified worksheet
-            OleDbDataAdapter dataAdapter = new 
-                OleDbDataAdapter(string.Format("SELECT " +
-                                               "PORD, {1} AS IDCTE, PLINE, PPROD, PODESC, PQORD,PQREC, PECST, PWHSE, NULL as HVDUE," +
-                                               "ICCOM, IDESC, PUM, Llave, VCOUN, PVEND,	VNDNAM, POFAC,POCUR, PCQTY, IDRAW, TEXT1 " +
-                                               "FROM [{0}$]", sheetName, _IdCLiente), connectionString);
+            string sql_query = string.Format("SELECT " +
+                                               " ` PO  Number`, {1} AS ClienteId,Item,Material,`Material Description`,`Quantity Ordered`,`Quantity to be delivered`,` Std Cost`,Plant " +
+                                               ",`PO UoM`,Vendor,`Vendor Name`,Currency FROM [{0}$]", sheetName, _IdCLiente);
+
+            OleDbDataAdapter dataAdapter = new
+                    OleDbDataAdapter(sql_query, connectionString);
 
             // Fill the dataset from the data adapter
             DataSet myDataSet = new DataSet();
@@ -758,12 +757,14 @@ namespace MaterialCore
             // Build the connectionstring
             string connectionString = string.Format(ConnectionStringTemplate, FileName);
 
+            string sql_query = string.Format("SELECT " +
+                                              "PORD, {1} AS IDCTE, PLINE, PPROD, PODESC, PQORD,PQREC, PECST, PWHSE, NULL as HVDUE," +
+                                              "PUM, Llave,PVEND,VNDNAM, POFAC,POCUR, PCQTY " +
+                                              "FROM [{0}$Query_from_QHPOARM]", sheetName, _IdCLiente);// cambio para poder mostrar los encabezados
+
             // Query the specified worksheet
             OleDbDataAdapter dataAdapter = new
-                OleDbDataAdapter(string.Format("SELECT " +
-                                               "PORD, {1} AS IDCTE, PLINE, PPROD, PODESC, PQORD,PQREC, PECST, PWHSE, NULL as HVDUE," +
-                                               "  PUM, Llave,  PVEND,	VNDNAM, POFAC,POCUR, PCQTY " +
-                                               "FROM [{0}$]", sheetName, _IdCLiente), connectionString);
+                OleDbDataAdapter(sql_query, connectionString);
             //dataAdapter.SelectCommand.Parameters.AddWithValue("@PORD","''");
             // Fill the dataset from the data adapter
             DataSet myDataSet = new DataSet();

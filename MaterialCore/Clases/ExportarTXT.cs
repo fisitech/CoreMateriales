@@ -107,7 +107,7 @@ namespace MaterialCore.Clases
                     {
 
                         linea = FormatoCampoEspacios(Convert.ToDateTime(txtDT[i]["FechaRecibo"]).ToString("yyyy-MM-dd"), 11, TextAlignment.Left) + "," +
-                        FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 5, TextAlignment.Right) + " " + "," +
+                                FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 5, TextAlignment.Right) + " " + "," +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 16, TextAlignment.Left) + "," +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 7, TextAlignment.Left) + "," +
                                 FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 3, TextAlignment.Right), 4, TextAlignment.Left) + "," +
