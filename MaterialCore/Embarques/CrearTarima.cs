@@ -94,8 +94,7 @@ namespace MaterialCore.Embarques
 
                //     txtTA.EnforceConstraints = false;
 
-                    txtTA.Fill(txtDT,               
-                        txtNumeroPaleta.Text,   txtPlanta.Text);
+                    txtTA.Fill(txtDT,txtNumeroPaleta.Text,   txtPlanta.Text);
 
 
                     if (txtDT.Rows.Count == 0 )

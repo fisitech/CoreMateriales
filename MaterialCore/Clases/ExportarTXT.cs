@@ -105,16 +105,19 @@ namespace MaterialCore.Clases
 
                     for (int i = 0; i < txtDT.Rows.Count; i++)
                     {
-
-                        linea = FormatoCampoEspacios(Convert.ToDateTime(txtDT[i]["FechaRecibo"]).ToString("yyyy-MM-dd"), 11, TextAlignment.Left) + "," +
-                                FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 5, TextAlignment.Right) + " " + "," +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 16, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 7, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 3, TextAlignment.Right), 4, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 16, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["CantidadRecibida"]), 12, 2, TextAlignment.Right), 13, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["UnidadMedida"]), 3, TextAlignment.Left) + ",";
-
+                        linea = linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), 30, TextAlignment.Left) + "," +
+                        FormatoCampoEspacios(Convert.ToDateTime(txtDT[i]["FechaRecibo"]).ToString("yyyy-MM-dd"), 10, TextAlignment.Left) + "," +
+                            FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 10, TextAlignment.Right) + "," +
+                            FormatoCampoEspacios(Convert.ToString(""), 2, TextAlignment.Left) + "," + //kind of material
+                            FormatoCampoEspacios(Convert.ToString(""), 4, TextAlignment.Left) + "," + //kind of importation
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["Moneda"]), 3, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(Convert.ToString(" "), 3, TextAlignment.Left) + "," + //incoterm
+                            FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 4, TextAlignment.Right), 10, TextAlignment.Left) + "," +
+                            FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 10, TextAlignment.Right) + "," +
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 20, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 30, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["CantidadRecibida"]), 12, 2, TextAlignment.Right), 12, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["UnidadMedida"]), 2, TextAlignment.Left) + "," ; 
 
                         //parte del peso
                         if (!EsProveedores) //archivo global
@@ -122,21 +125,21 @@ namespace MaterialCore.Clases
                             if (i == 0)
                             {
                                 linea +=
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) + ",";
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 17, TextAlignment.Left) + "," +
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 17, TextAlignment.Left)+ "," ;
                             }
                             else
                             {
                                 linea +=
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) + ",";
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 17, TextAlignment.Left) + "," +
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 17, TextAlignment.Left)+ "," ;
                             }
                         }
                         else //SI es el archivo de proveedor
                         {
                             linea +=
-                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) + "," +
-                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) + ",";
+                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 17, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 17, TextAlignment.Left)+ "," ;
                         }
 
                         string pais = Convert.ToString(txtDT[i]["Pais"]);
@@ -144,47 +147,33 @@ namespace MaterialCore.Clases
                             pais = pais.Substring(0, 2);
 
                         linea +=
-                            //FormatoCampoEspacios(Convert.ToString(txtDT[i]["Pais"]).Substring(0, 2), 7, TextAlignment.Left) +
-                        FormatoCampoEspacios(Convert.ToString(pais), 7, TextAlignment.Left) + "," +
-                        FormatoCampoEspacios(Convert.ToString(txtDT[i]["Moneda"]), 4, TextAlignment.Left) + ",";
+                        FormatoCampoEspacios(Convert.ToString(pais), 2, TextAlignment.Left) + "," +
+                        FormatoCampoEspacios(Convert.ToString(""), 3, TextAlignment.Left)+ "," ;//available
 
                         //Cantidad de bultos solo en primer renglon
                         if (i == 0)
-                            linea += FormatoCampoEspacios(FormatoCampoCeros(bultos.ToString(), 9, TextAlignment.Right), 10, TextAlignment.Left) + ",";
-                        else
-                            linea += FormatoCampoEspacios(FormatoCampoCeros("0", 9, TextAlignment.Right), 10, TextAlignment.Left) + ",";
-
-                        if (i == 0)
                         {
                             linea +=
-                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu1"]), 5, TextAlignment.Left) + "," +
-                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu2"]), 5, TextAlignment.Left) + ",";
+                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu1"]), 9, TextAlignment.Left) + "," +
+                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu2"]), 4, TextAlignment.Left)+ "," ;
                         }
                         else
                         {
                             linea +=
-                               FormatoCampoEspacios(Convert.ToString(""), 5, TextAlignment.Left) + "," +
-                               FormatoCampoEspacios(Convert.ToString(""), 5, TextAlignment.Left) + ",";
+                               FormatoCampoEspacios(Convert.ToString(""), 9, TextAlignment.Left) + "," +
+                               FormatoCampoEspacios(Convert.ToString(""), 4, TextAlignment.Left)+ "," ;
                         }
 
                         linea +=
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroPaleta"]), 42, TextAlignment.Left) + ",";
-
-
-
-                        if (EsProveedores)
-                        {
-
-                            linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), 41, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["EmbarquePlanta"]), 8, TextAlignment.Left) + ","; //consecutivo + nombrepaleta
-                            //   FormatoCampoEspacios(Convert.ToString(txtDT[i]["Tarima"]), 42, TextAlignment.Left);
-                            //aqui debe de ir el nombre dde la tabla
-
-                            //   FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), txtDT[i]["NoGuia"].ToString().Length, TextAlignment.Left);
-                        }
-                        else
-                            linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), txtDT[i]["NoGuia"].ToString().Length, TextAlignment.Left) + ",";
-
+                            FormatoCampoEspacios(Convert.ToString(""), 4, TextAlignment.Left) + "," + //kind of packaging
+                            FormatoCampoEspacios(Convert.ToString(""), 10, TextAlignment.Left) + "," + //tracking  (for Virtuales )
+                            FormatoCampoEspacios(Convert.ToString(""), 17, TextAlignment.Left) + "," + //value
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 30, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(Convert.ToString(""), 8, TextAlignment.Left) + "," + //warehouse
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), 41, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroPaleta"]), 30, TextAlignment.Left) + "," +
+                            FormatoCampoEspacios(Convert.ToString(""), 21, TextAlignment.Left) + "," + //# ART & program
+                            FormatoCampoEspacios(Convert.ToString(""), 15, TextAlignment.Left) ; //FI  account 
 
                         sw.WriteLine(linea);
                     }
@@ -194,15 +183,19 @@ namespace MaterialCore.Clases
                     for (int i = 0; i < txtDT.Rows.Count; i++)
                     {
 
-                        linea = FormatoCampoEspacios(Convert.ToDateTime(txtDT[i]["FechaRecibo"]).ToString("yyyy-MM-dd"), 11, TextAlignment.Left) +
-                        FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 5, TextAlignment.Right) + " " +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 16, TextAlignment.Left) +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 7, TextAlignment.Left) +
-                                FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 3, TextAlignment.Right), 4, TextAlignment.Left) +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 16, TextAlignment.Left) +
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["CantidadRecibida"]), 12, 2, TextAlignment.Right), 13, TextAlignment.Left) +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["UnidadMedida"]), 3, TextAlignment.Left);
-
+                        linea = linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]),30, TextAlignment.Left) +
+                            FormatoCampoEspacios(Convert.ToDateTime(txtDT[i]["FechaRecibo"]).ToString("yyyy-MM-dd"), 10, TextAlignment.Left) +
+                                FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 10, TextAlignment.Right) +
+                                FormatoCampoEspacios(Convert.ToString(""), 2, TextAlignment.Left) + //kind of material
+                                FormatoCampoEspacios(Convert.ToString(""), 4, TextAlignment.Left) + //kind of importation
+                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["Moneda"]), 3, TextAlignment.Left) +
+                                FormatoCampoEspacios(Convert.ToString(" "), 3, TextAlignment.Left) + //incoterm
+                                FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 4, TextAlignment.Right), 10, TextAlignment.Left) +
+                                FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 10, TextAlignment.Right) +
+                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 20, TextAlignment.Left) +                               
+                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 30, TextAlignment.Left) +
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["CantidadRecibida"]), 12, 2, TextAlignment.Right), 12, TextAlignment.Left) +
+                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["UnidadMedida"]), 2, TextAlignment.Left);
 
                         //parte del peso
                         if (!EsProveedores) //archivo global
@@ -210,68 +203,55 @@ namespace MaterialCore.Clases
                             if (i == 0)
                             {
                                 linea +=
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) +
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 18, TextAlignment.Left);
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 17, TextAlignment.Left) +
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(peso), 17, 8, TextAlignment.Right), 17, TextAlignment.Left);
                             }
                             else
                             {
                                 linea +=
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) +
-                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 18, TextAlignment.Left);
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 17, TextAlignment.Left) +
+                                FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(0), 17, 8, TextAlignment.Right), 17, TextAlignment.Left);
                             }
                         }
                         else //SI es el archivo de proveedor
                         {
                             linea +=
-                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 18, TextAlignment.Left) +
-                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 18, TextAlignment.Left);
+                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 17, TextAlignment.Left) +
+                            FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["Peso"]), 17, 8, TextAlignment.Right), 17, TextAlignment.Left);
                         }
 
                         string pais = Convert.ToString(txtDT[i]["Pais"]);
                         if (pais.Length > 2)
                             pais = pais.Substring(0, 2);
 
-                        linea +=
-                            //FormatoCampoEspacios(Convert.ToString(txtDT[i]["Pais"]).Substring(0, 2), 7, TextAlignment.Left) +
-                        FormatoCampoEspacios(Convert.ToString(pais), 7, TextAlignment.Left) +
-                        FormatoCampoEspacios(Convert.ToString(txtDT[i]["Moneda"]), 4, TextAlignment.Left);
+                        linea +=                         
+                        FormatoCampoEspacios(Convert.ToString(pais), 2, TextAlignment.Left) +
+                        FormatoCampoEspacios(Convert.ToString(""), 3, TextAlignment.Left);//available
 
                         //Cantidad de bultos solo en primer renglon
                         if (i == 0)
-                            linea += FormatoCampoEspacios(FormatoCampoCeros(bultos.ToString(), 9, TextAlignment.Right), 10, TextAlignment.Left);
-                        else
-                            linea += FormatoCampoEspacios(FormatoCampoCeros("0", 9, TextAlignment.Right), 10, TextAlignment.Left);
-
-                        if (i == 0)
                         {
                             linea +=
-                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu1"]), 5, TextAlignment.Left) +
-                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu2"]), 5, TextAlignment.Left);
+                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu1"]), 9, TextAlignment.Left) +
+                               FormatoCampoEspacios(Convert.ToString(txtDT[i]["Bu2"]), 4, TextAlignment.Left);
                         }
                         else
                         {
                             linea +=
-                               FormatoCampoEspacios(Convert.ToString(""), 5, TextAlignment.Left) +
-                               FormatoCampoEspacios(Convert.ToString(""), 5, TextAlignment.Left);
+                               FormatoCampoEspacios(Convert.ToString(""), 9, TextAlignment.Left) + 
+                               FormatoCampoEspacios(Convert.ToString(""), 4, TextAlignment.Left); 
                         }
 
                         linea +=
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroPaleta"]), 42, TextAlignment.Left);
-
-
-
-                        if (EsProveedores)
-                        {
-
-                            linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), 41, TextAlignment.Left) +
-                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["EmbarquePlanta"]), 8, TextAlignment.Left); //consecutivo + nombrepaleta
-                            //   FormatoCampoEspacios(Convert.ToString(txtDT[i]["Tarima"]), 42, TextAlignment.Left);
-                            //aqui debe de ir el nombre dde la tabla
-
-                            //   FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), txtDT[i]["NoGuia"].ToString().Length, TextAlignment.Left);
-                        }
-                        else
-                            linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), txtDT[i]["NoGuia"].ToString().Length, TextAlignment.Left);
+                            FormatoCampoEspacios(Convert.ToString(""), 4, TextAlignment.Left) + //kind of packaging
+                            FormatoCampoEspacios(Convert.ToString(""), 10, TextAlignment.Left) + //tracking  (for Virtuales )
+                            FormatoCampoEspacios(Convert.ToString(""), 17, TextAlignment.Left) + //value
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 30, TextAlignment.Left) +
+                            FormatoCampoEspacios(Convert.ToString(""), 8, TextAlignment.Left) + //warehouse
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), 41, TextAlignment.Left) +
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroPaleta"]), 30, TextAlignment.Left) +
+                            FormatoCampoEspacios(Convert.ToString(""), 21, TextAlignment.Left) + //# ART & program
+                            FormatoCampoEspacios(Convert.ToString(""), 15, TextAlignment.Left); //FI  account 
 
                         sw.WriteLine(linea);
                     }

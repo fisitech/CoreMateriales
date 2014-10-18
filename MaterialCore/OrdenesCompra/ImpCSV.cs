@@ -26,6 +26,7 @@ namespace MaterialCore
 
         //codigo para evitar que se abra varias veces la forma
         Clases.Bitacora _Bitacora = new MaterialCore.Clases.Bitacora();
+        Clases.SSIS paquete = new MaterialCore.Clases.SSIS();
         private static ImpCSV m_FormDefInstance;
         public static ImpCSV DefInstance
         {
@@ -117,24 +118,26 @@ namespace MaterialCore
             }
             else
             {
+                
                 Barra.Value = 10;
                 tslblEstado.Text = "Leyendo archivo de Excel.";
+                paquete.Execute_Package(Application.StartupPath + @"\Paquetes\Materiales.dtsx", dir);
                 statusStrip1.Refresh();
-                ExcelProvider provider = new ExcelProvider(dir,70);
-                DataTable registrosExcel = provider.GetWorkSheet("Open PO"); //cambio carlos el nombre de la hoja
-                Barra.Value = 65;
+                //ExcelProvider provider = new ExcelProvider(dir,70);
+                //DataTable registrosExcel = provider.GetWorkSheet("Open PO"); //cambio carlos el nombre de la hoja
+                //Barra.Value = 65;
 
-                tslblEstado.Text = "Actualizando Base de datos.";
-                statusStrip1.Refresh();
-                this.BorrarMaterialesExcelOC();
-                Barra.Value = 75;
-                this.CopiarTablaBD("MaterialesExcelOC",registrosExcel);
-                statusStrip1.Refresh();
-                Barra.Value = 88;
+                //tslblEstado.Text = "Actualizando Base de datos.";
+                //statusStrip1.Refresh();
+                //this.BorrarMaterialesExcelOC();
+                //Barra.Value = 75;
+                //this.CopiarTablaBD("MaterialesExcelOC",registrosExcel);
+                //statusStrip1.Refresh();
+                //Barra.Value = 88;
 
-                tslblEstado.Text = "Sincronizando registros.";
-                statusStrip1.Refresh();
-                this.SincronizarOC();
+                //tslblEstado.Text = "Sincronizando registros.";
+                //statusStrip1.Refresh();
+                //this.SincronizarOC();
                 Barra.Value = 100;
 
                 tslblEstado.Text = "Proceso finalizado";
@@ -157,23 +160,24 @@ namespace MaterialCore
             {
                 Barra.Value = 10;
                 tslblEstado.Text = "Leyendo archivo de Excel.";
+                paquete.Execute_Package(Application.StartupPath + @"\Paquetes\MaquinariaEquipo.dtsx", dir);//@"C:\MRO.CSV"
                 statusStrip1.Refresh();
-                ExcelProvider provider = new ExcelProvider(dir, 70);
-                DataTable registrosExcel = provider.GetWorkSheetMeQ("ME2N");
-                //DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
-                Barra.Value = 65;
+                //ExcelProvider provider = new ExcelProvider(dir, 70);
+                //DataTable registrosExcel = provider.GetWorkSheetMeQ("ME2N");
+                ////DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
+                //Barra.Value = 65;
 
-                tslblEstado.Text = "Actualizando Base de datos.";
-                statusStrip1.Refresh();
-                this.BorrarMaterialesExcelOCMeQ();
-                Barra.Value = 75;
-                this.CopiarTablaBDMeQ("MaterialesExcelOCMeQ", registrosExcel);
-                statusStrip1.Refresh();
-                Barra.Value = 88;
+                //tslblEstado.Text = "Actualizando Base de datos.";
+                //statusStrip1.Refresh();
+                //this.BorrarMaterialesExcelOCMeQ();
+                //Barra.Value = 75;
+                //this.CopiarTablaBDMeQ("MaterialesExcelOCMeQ", registrosExcel);
+                //statusStrip1.Refresh();
+                //Barra.Value = 88;
 
-                tslblEstado.Text = "Sincronizando registros.";
-                statusStrip1.Refresh();
-                this.SincronizarOCMeQ();
+                //tslblEstado.Text = "Sincronizando registros.";
+                //statusStrip1.Refresh();
+                //this.SincronizarOCMeQ();
                 Barra.Value = 100;
 
                 tslblEstado.Text = "Proceso finalizado";
@@ -589,7 +593,7 @@ namespace MaterialCore
                     CargaArchivoMeQ(lblMeQ.Text);
                     btnCargar.Visible = true;
                 }
-                MessageBox.Show("Archivo cargado con éxito");
+                //MessageBox.Show("Archivo cargado con éxito");
                 this.Close();
             }
             else //Modo manual
