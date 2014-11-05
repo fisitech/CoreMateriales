@@ -27,7 +27,7 @@ public partial class UserDefinedFunctions
             _FileStream.Write(barchivo, 0, (int)barchivo.Length);
             _FileStream.Close();
 
-            string filepath = @"\Package.Variables[User::filepath].Properties[Value];""" + NombreArchivo + @""" ";
+            string filepath = @"\Package.Variables[User::filepath].Properties[Value];""" + @"c:\temp\" + NombreArchivo + @""" ";
             int result = ExecuteDTExec(@"""C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\DTExec.exe"" ", PassPaquete, @"c:\Temp\" + NombrePaquete + ".dtsx", filepath);
 
             return result;
@@ -74,6 +74,7 @@ public partial class UserDefinedFunctions
             {
                 p.WaitForExit();
                 processResults = p.ExitCode;
+                //p.StandardOutput;
             }
             return processResults;
         }
