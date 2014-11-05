@@ -1,0 +1,3 @@
+dtexec /F Materiales.dtsx /SET \Package.Variables[User::filepath].Properties[Value];"c:\rawpo.csv"
+
+pause

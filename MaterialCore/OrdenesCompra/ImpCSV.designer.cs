@@ -167,7 +167,7 @@ namespace MaterialCore
             // tslblEstado
             // 
             this.tslblEstado.Name = "tslblEstado";
-            this.tslblEstado.Size = new System.Drawing.Size(118, 17);
+            this.tslblEstado.Size = new System.Drawing.Size(127, 17);
             this.tslblEstado.Text = "Esperando Comando...";
             // 
             // chkMat

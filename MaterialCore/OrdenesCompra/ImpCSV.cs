@@ -14,6 +14,7 @@ using ClosedXML.Excel;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using System.Threading;
+using System.Data.SqlTypes;
 
 namespace MaterialCore
 {
@@ -26,7 +27,6 @@ namespace MaterialCore
 
         //codigo para evitar que se abra varias veces la forma
         Clases.Bitacora _Bitacora = new MaterialCore.Clases.Bitacora();
-        Clases.SSIS paquete = new MaterialCore.Clases.SSIS();
         private static ImpCSV m_FormDefInstance;
         public static ImpCSV DefInstance
         {
@@ -84,8 +84,8 @@ namespace MaterialCore
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialogo = new OpenFileDialog();
-            dialogo.Filter = "Libro de Excel (*.xls,*.xlsx)|*.xls;*.xlsx"+
-                             "|Archivo CSV (*.csv)|*.csv";
+            dialogo.Filter = "Archivo CSV (*.csv)|*.csv" +
+                             "|Libro de Excel (*.xls,*.xlsx)|*.xls;*.xlsx";
             dialogo.FilterIndex = 1;
             dialogo.Multiselect = false;
             dialogo.RestoreDirectory = true;
@@ -111,6 +111,7 @@ namespace MaterialCore
         //archivo CSV
         private bool CargaArchivo(string dir)
         {
+            
             if (!File.Exists(dir))//si no existe el archivo 
             {
                 MessageBox.Show("El archivo no existe");
@@ -121,23 +122,25 @@ namespace MaterialCore
                 
                 Barra.Value = 10;
                 tslblEstado.Text = "Leyendo archivo de Excel.";
-                paquete.Execute_Package(Application.StartupPath + @"\Paquetes\Materiales.dtsx", dir);
+
                 statusStrip1.Refresh();
-                //ExcelProvider provider = new ExcelProvider(dir,70);
-                //DataTable registrosExcel = provider.GetWorkSheet("Open PO"); //cambio carlos el nombre de la hoja
-                //Barra.Value = 65;
 
-                //tslblEstado.Text = "Actualizando Base de datos.";
-                //statusStrip1.Refresh();
-                //this.BorrarMaterialesExcelOC();
-                //Barra.Value = 75;
-                //this.CopiarTablaBD("MaterialesExcelOC",registrosExcel);
-                //statusStrip1.Refresh();
-                //Barra.Value = 88;
 
-                //tslblEstado.Text = "Sincronizando registros.";
-                //statusStrip1.Refresh();
-                //this.SincronizarOC();
+                ExcelProvider provider = new ExcelProvider(dir, 70);
+                DataTable registrosExcel = provider.GetWorkSheet("Open PO"); //cambio carlos el nombre de la hoja
+                Barra.Value = 65;
+
+                tslblEstado.Text = "Actualizando Base de datos.";
+                statusStrip1.Refresh();
+                this.BorrarMaterialesExcelOC();
+                Barra.Value = 75;
+                this.CopiarTablaBD("MaterialesExcelOC", registrosExcel);
+                statusStrip1.Refresh();
+                Barra.Value = 88;
+
+                tslblEstado.Text = "Sincronizando registros.";
+                statusStrip1.Refresh();
+                this.SincronizarOC();
                 Barra.Value = 100;
 
                 tslblEstado.Text = "Proceso finalizado";
@@ -148,7 +151,6 @@ namespace MaterialCore
             
             return true;
         }
-
         private bool CargaArchivoMeQ(string dir)
         {
             if (!File.Exists(dir))//si no existe el archivo 
@@ -160,24 +162,24 @@ namespace MaterialCore
             {
                 Barra.Value = 10;
                 tslblEstado.Text = "Leyendo archivo de Excel.";
-                paquete.Execute_Package(Application.StartupPath + @"\Paquetes\MaquinariaEquipo.dtsx", dir);//@"C:\MRO.CSV"
+                //paquete.Execute_Package(Application.StartupPath + @"\Paquetes\MaquinariaEquipo.dtsx", dir);//@"C:\MRO.CSV"
                 statusStrip1.Refresh();
-                //ExcelProvider provider = new ExcelProvider(dir, 70);
-                //DataTable registrosExcel = provider.GetWorkSheetMeQ("ME2N");
-                ////DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
-                //Barra.Value = 65;
+                ExcelProvider provider = new ExcelProvider(dir, 70);
+                DataTable registrosExcel = provider.GetWorkSheetMeQ("ME2N");
+                //DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
+                Barra.Value = 65;
 
-                //tslblEstado.Text = "Actualizando Base de datos.";
-                //statusStrip1.Refresh();
-                //this.BorrarMaterialesExcelOCMeQ();
-                //Barra.Value = 75;
-                //this.CopiarTablaBDMeQ("MaterialesExcelOCMeQ", registrosExcel);
-                //statusStrip1.Refresh();
-                //Barra.Value = 88;
+                tslblEstado.Text = "Actualizando Base de datos.";
+                statusStrip1.Refresh();
+                this.BorrarMaterialesExcelOCMeQ();
+                Barra.Value = 75;
+                this.CopiarTablaBDMeQ("MaterialesExcelOCMeQ", registrosExcel);
+                statusStrip1.Refresh();
+                Barra.Value = 88;
 
-                //tslblEstado.Text = "Sincronizando registros.";
-                //statusStrip1.Refresh();
-                //this.SincronizarOCMeQ();
+                tslblEstado.Text = "Sincronizando registros.";
+                statusStrip1.Refresh();
+                this.SincronizarOCMeQ();
                 Barra.Value = 100;
 
                 tslblEstado.Text = "Proceso finalizado";
@@ -194,14 +196,12 @@ namespace MaterialCore
             conn.ExecSQL("DELETE FROM dbo.MaterialesExcelOC;");
             conn.FinConexion();
         }
-
         private void BorrarMaterialesExcelOCMeQ()
         {
             Clases.Conexion conn = new MaterialCore.Clases.Conexion();
             conn.ExecSQL("DELETE FROM dbo.MaterialesExcelOCMeQ;");
             conn.FinConexion();
         }
-
         private void CopiarTablaBD(string Tabla, DataTable registros)
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MaterialCore.Properties.Settings.CoreConnectionString"].ConnectionString;
@@ -425,8 +425,6 @@ namespace MaterialCore
                 }
             }
         }
-
-
         private void CopiarTablaBDMeQ(string Tabla, DataTable registros)
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MaterialCore.Properties.Settings.CoreConnectionString"].ConnectionString;
@@ -523,6 +521,51 @@ namespace MaterialCore
             }
         }
 
+        private void EjecutaPaquete(String fileName,string NombrePaquete)
+        {
+            
+            FileStream fs = new FileStream(fileName,
+                                   FileMode.Open,
+                                   FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            long numBytes = new FileInfo(fileName).Length;
+      
+            SqlBytes archivo = new SqlBytes(br.ReadBytes((int)numBytes));
+            
+
+            DataSets.GeneralTableAdapters.EjecutaPaquete Ejecuta = new MaterialCore.DataSets.GeneralTableAdapters.EjecutaPaquete();
+            int? resultado = Ejecuta.RunPackage(NombrePaquete + ".csv", archivo.Value, NombrePaquete, "123");
+
+            //MessageBox.Show(resultado);
+            if (resultado == null) {
+                 MessageBox.Show("error");
+            }else if(resultado==0 ){
+                MessageBox.Show("The package executed successfully.");
+            }
+            else if (resultado == 1)
+            {
+                MessageBox.Show("The package failed.");
+            }
+            else if (resultado == 3)
+            {
+                MessageBox.Show("The package was canceled by the user.");
+            }
+            else if (resultado == 4)
+            {
+                MessageBox.Show("The utility was unable to locate the requested package. The package could not be found.");
+            }
+            else if (resultado == 5)
+            {
+                MessageBox.Show("The utility was unable to load the requested package. The package could not be loaded.");
+            }
+            else if (resultado == 6)
+            {
+                MessageBox.Show("The utility encountered an internal error of syntactic or semantic errors in the command line.");
+            }
+            
+        }
+
+
         private void SincronizarOC()
         {
             Clases.Conexion conn = new MaterialCore.Clases.Conexion();
@@ -532,7 +575,6 @@ namespace MaterialCore
 
             conn.FinConexion();
         }
-
         private void SincronizarOCMeQ()
         {
             Clases.Conexion conn = new MaterialCore.Clases.Conexion();
@@ -542,7 +584,6 @@ namespace MaterialCore
 
             conn.FinConexion();
         }
-
         void CargarCSV(string dir)
         {
             int total_registros = RenglonesCSV(dir);
@@ -565,7 +606,7 @@ namespace MaterialCore
                 linea = archivo.ReadLine();
             }
             archivo.Close();
-            MessageBox.Show("Archivo cargado a la base de datos con exito");
+            //MessageBox.Show("Archivo cargado a la base de datos con exito");
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -583,14 +624,16 @@ namespace MaterialCore
                 {
                     lblDirCSV.Text =    System.Configuration.ConfigurationManager.AppSettings["dirCSV"].ToString();
                     btnCargar.Visible = false;
-                    CargaArchivo(lblDirCSV.Text);
+                    //CargaArchivo(lblDirCSV.Text);
+                    EjecutaPaquete(lblDirCSV.Text,"Materiales");
                     btnCargar.Visible = true;
                 }
               if( chkMeQ.Checked)
                 {
                     lblMeQ.Text = System.Configuration.ConfigurationManager.AppSettings["dirXLSMeQ"].ToString();
                     btnCargar.Visible = false;
-                    CargaArchivoMeQ(lblMeQ.Text);
+                    //CargaArchivoMeQ(lblMeQ.Text);
+                    EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo");
                     btnCargar.Visible = true;
                 }
                 //MessageBox.Show("Archivo cargado con éxito");
@@ -607,16 +650,18 @@ namespace MaterialCore
                 if (chkMat.Checked)
                 {
                     btnCargar.Visible = false;
-                    CargaArchivo(lblDirCSV.Text);
+                    //CargaArchivo(lblDirCSV.Text);
+                    EjecutaPaquete(lblDirCSV.Text, "Materiales");
                     btnCargar.Visible = true;
                 }
                 if (chkMeQ.Checked)
                 {
                     btnCargar.Visible = false;
-                    CargaArchivoMeQ(lblMeQ.Text);
+                    //CargaArchivoMeQ(lblMeQ.Text);
+                    EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo");
                     btnCargar.Visible = true;
                 }
-                MessageBox.Show("Archivo cargado con éxito");
+                //MessageBox.Show("Archivo cargado con éxito");
                 this.Close();
             }
 
@@ -688,6 +733,8 @@ namespace MaterialCore
             if (resultado == DialogResult.OK)
                 lblMeQ.Text = dialogo.FileName.ToString();
         }
+
+
 
 
         }
