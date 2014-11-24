@@ -65,21 +65,21 @@ namespace MaterialCore.Clases
 
                     linea +=
                         //FormatoCampoEspacios(Convert.ToString(txtDT[i]["Pais"]).Substring(0, 2), 7, TextAlignment.Left) + //corta la cadena a 2 caracteres
-                      FormatoCampoEspacios(Convert.ToString(pais), 7, TextAlignment.Left) + //corta la cadena a 2 caracteres
-                      FormatoCampoEspacios(Convert.ToString(txtDT[i]["Moneda"]), 4, TextAlignment.Left) +
+                      FormatoCampoEspacios(Convert.ToString(pais), 2, TextAlignment.Left) + //corta la cadena a 2 caracteres
+                      FormatoCampoEspacios(Convert.ToString(txtDT[i]["Moneda"]), 3, TextAlignment.Left) +
                       FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["Numero2"]), 9, TextAlignment.Left), 10, TextAlignment.Left);
 
                     if (EsProveedores)
                     {
-                        linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), 41, TextAlignment.Left) +
+                        linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), 30, TextAlignment.Left) +
                              FormatoCampoEspacios(Convert.ToString(txtDT[i]["EmbarquePlanta"]), 8, TextAlignment.Left) +
-                             FormatoCampoEspacios(Convert.ToString(txtDT[i]["Tarima"]), 42, TextAlignment.Left);
+                             FormatoCampoEspacios(Convert.ToString(txtDT[i]["Tarima"]), 30, TextAlignment.Left);
                         //aqui debe de ir el nombre dde la tabla
 
                         //   FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), txtDT[i]["NoGuia"].ToString().Length, TextAlignment.Left);
                     }
                     else
-                        linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]), txtDT[i]["NoGuia"].ToString().Length, TextAlignment.Left);
+                        linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NoGuia"]),30, TextAlignment.Left);
 
                     sw.WriteLine(linea);
                 }
@@ -238,9 +238,9 @@ namespace MaterialCore.Clases
 
                         //Cantidad de bultos solo en primer renglon
                         if (i == 0)
-                            linea += FormatoCampoEspacios(FormatoCampoCeros(bultos.ToString(), 9, TextAlignment.Right), 10, TextAlignment.Left) + " ";
+                            linea += FormatoCampoEspacios(FormatoCampoCeros(bultos.ToString(), 9, TextAlignment.Right), 9, TextAlignment.Left) + " ";
                         else
-                            linea += FormatoCampoEspacios(FormatoCampoCeros("0", 9, TextAlignment.Right), 10, TextAlignment.Left) + " ";
+                            linea += FormatoCampoEspacios(FormatoCampoCeros("0", 9, TextAlignment.Right), 9, TextAlignment.Left) + " ";
 
                         if (i == 0)
                         {
