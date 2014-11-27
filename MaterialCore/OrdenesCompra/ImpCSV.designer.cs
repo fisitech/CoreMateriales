@@ -116,6 +116,7 @@ namespace MaterialCore
             this.lblDirCSV.Size = new System.Drawing.Size(336, 49);
             this.lblDirCSV.TabIndex = 6;
             this.lblDirCSV.Text = "C:\\la que esta en el archivo de config\\mas bnombre.ext";
+            
             // 
             // btnBuscar
             // 

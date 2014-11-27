@@ -14,7 +14,7 @@ using ClosedXML.Excel;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using System.Threading;
-using System.Data.SqlTypes;
+using System.Data.SqlTypes; 
 
 namespace MaterialCore
 {
@@ -84,8 +84,8 @@ namespace MaterialCore
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialogo = new OpenFileDialog();
-            dialogo.Filter = "Archivo CSV (*.csv)|*.csv" +
-                             "|Libro de Excel (*.xls,*.xlsx)|*.xls;*.xlsx";
+            dialogo.Filter = "Libro de Excel (*.xls,*.xlsx)|*.xls;*.xlsx" +
+                             "|Archivo CSV (*.csv)|*.csv";
             dialogo.FilterIndex = 1;
             dialogo.Multiselect = false;
             dialogo.RestoreDirectory = true;
@@ -102,7 +102,18 @@ namespace MaterialCore
 
             FileInfo extencion = new FileInfo(archivo);
 
-            if (extencion.Extension == ".xls" || extencion.Extension == ".xlsx")
+            if (extencion.Extension.ToLower() == ".xls" || extencion.Extension.ToLower() == ".xlsx")
+                resultado = true;
+
+            return resultado;
+        }
+        private bool ExtencionCSV(string archivo)
+        {
+            bool resultado = false;
+
+            FileInfo extencion = new FileInfo(archivo);
+
+            if (extencion.Extension.ToLower() == ".csv" )
                 resultado = true;
 
             return resultado;
@@ -111,7 +122,6 @@ namespace MaterialCore
         //archivo CSV
         private bool CargaArchivo(string dir)
         {
-            
             if (!File.Exists(dir))//si no existe el archivo 
             {
                 MessageBox.Show("El archivo no existe");
@@ -119,22 +129,18 @@ namespace MaterialCore
             }
             else
             {
-                
                 Barra.Value = 10;
                 tslblEstado.Text = "Leyendo archivo de Excel.";
-
                 statusStrip1.Refresh();
-
-
-                ExcelProvider provider = new ExcelProvider(dir, 70);
-                DataTable registrosExcel = provider.GetWorkSheet("Open PO"); //cambio carlos el nombre de la hoja
+                ExcelProvider provider = new ExcelProvider(dir,70);
+                DataTable registrosExcel = provider.GetWorkSheet("Sheet1");
                 Barra.Value = 65;
 
                 tslblEstado.Text = "Actualizando Base de datos.";
                 statusStrip1.Refresh();
                 this.BorrarMaterialesExcelOC();
                 Barra.Value = 75;
-                this.CopiarTablaBD("MaterialesExcelOC", registrosExcel);
+                this.CopiarTablaBD("MaterialesExcelOC",registrosExcel);
                 statusStrip1.Refresh();
                 Barra.Value = 88;
 
@@ -145,12 +151,13 @@ namespace MaterialCore
 
                 tslblEstado.Text = "Proceso finalizado";
                 _Bitacora.MatImporto();
-            //    MessageBox.Show("Archivo insertado a la base de datos");             
+                MessageBox.Show("Archivo insertado a la base de datos");             
    
             }
             
             return true;
         }
+
         private bool CargaArchivoMeQ(string dir)
         {
             if (!File.Exists(dir))//si no existe el archivo 
@@ -162,11 +169,9 @@ namespace MaterialCore
             {
                 Barra.Value = 10;
                 tslblEstado.Text = "Leyendo archivo de Excel.";
-                //paquete.Execute_Package(Application.StartupPath + @"\Paquetes\MaquinariaEquipo.dtsx", dir);//@"C:\MRO.CSV"
                 statusStrip1.Refresh();
                 ExcelProvider provider = new ExcelProvider(dir, 70);
-                DataTable registrosExcel = provider.GetWorkSheetMeQ("ME2N");
-                //DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
+                DataTable registrosExcel = provider.GetWorkSheetMeQ("Sheet1");
                 Barra.Value = 65;
 
                 tslblEstado.Text = "Actualizando Base de datos.";
@@ -184,7 +189,7 @@ namespace MaterialCore
 
                 tslblEstado.Text = "Proceso finalizado";
                 _Bitacora.MeqImporto();
-            //    MessageBox.Show("Archivo insertado a la base de datos");
+                MessageBox.Show("Archivo insertado a la base de datos");
             }
 
             return true;
@@ -196,103 +201,108 @@ namespace MaterialCore
             conn.ExecSQL("DELETE FROM dbo.MaterialesExcelOC;");
             conn.FinConexion();
         }
+
         private void BorrarMaterialesExcelOCMeQ()
         {
             Clases.Conexion conn = new MaterialCore.Clases.Conexion();
             conn.ExecSQL("DELETE FROM dbo.MaterialesExcelOCMeQ;");
             conn.FinConexion();
         }
+
         private void CopiarTablaBD(string Tabla, DataTable registros)
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MaterialCore.Properties.Settings.CoreConnectionString"].ConnectionString;
 
-            using (SqlConnection destinationConnection =new SqlConnection(connectionString))
+            using (SqlConnection destinationConnection =
+                   new SqlConnection(connectionString))
             {
                 destinationConnection.Open();
 
-                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(destinationConnection))
+                using (SqlBulkCopy bulkCopy =
+                           new SqlBulkCopy(destinationConnection))
                 {
-                    bulkCopy.DestinationTableName = Tabla;
+                    bulkCopy.DestinationTableName =
+                        Tabla;
 
                     SqlBulkCopyColumnMapping mapID =
-                        new SqlBulkCopyColumnMapping(" PO  Number", "Id");//int hay valores ke no caben en int ej 4500016208
+                        new SqlBulkCopyColumnMapping("PORD", "Id");
                     bulkCopy.ColumnMappings.Add(mapID);
 
                     SqlBulkCopyColumnMapping mapClienteId =
-                        new SqlBulkCopyColumnMapping("ClienteId", "ClienteId");//int
+                        new SqlBulkCopyColumnMapping("IDCTE", "ClienteId");
                     bulkCopy.ColumnMappings.Add(mapClienteId);
 
                     SqlBulkCopyColumnMapping mapRenglonId =
-                        new SqlBulkCopyColumnMapping("Item", "RenglonId");//int
+                        new SqlBulkCopyColumnMapping("PLINE", "RenglonId");
                     bulkCopy.ColumnMappings.Add(mapRenglonId);
 
                     SqlBulkCopyColumnMapping mapNumeroParte =
-                        new SqlBulkCopyColumnMapping("Material", "NumeroParte");
+                        new SqlBulkCopyColumnMapping("PPROD", "NumeroParte");
                     bulkCopy.ColumnMappings.Add(mapNumeroParte);
 
                     SqlBulkCopyColumnMapping mapDescripcion =
-                        new SqlBulkCopyColumnMapping("Material Description", "Descripcion");
+                        new SqlBulkCopyColumnMapping("PODESC", "Descripcion");
                     bulkCopy.ColumnMappings.Add(mapDescripcion);
 
                     SqlBulkCopyColumnMapping mapCantidad =
-                        new SqlBulkCopyColumnMapping("Quantity Ordered", "Cantidad");//numeric
+                        new SqlBulkCopyColumnMapping("PQORD", "Cantidad");
                     bulkCopy.ColumnMappings.Add(mapCantidad);
 
                     SqlBulkCopyColumnMapping mapPqOrd =
-                        new SqlBulkCopyColumnMapping("Quantity Ordered", "PqOrd");//numeric
+                        new SqlBulkCopyColumnMapping("PQORD", "PqOrd");
                     bulkCopy.ColumnMappings.Add(mapPqOrd);
 
                     SqlBulkCopyColumnMapping mapPqRec =
-                    new SqlBulkCopyColumnMapping("Quantity to be delivered", "PqRec");//numeric
+                    new SqlBulkCopyColumnMapping("PQREC", "PqRec");
                     bulkCopy.ColumnMappings.Add(mapPqRec);
 
                     SqlBulkCopyColumnMapping mapPrecio =
-                        new SqlBulkCopyColumnMapping(" Std Cost", "Precio"); //numeric
+                        new SqlBulkCopyColumnMapping("PECST", "Precio");
                     bulkCopy.ColumnMappings.Add(mapPrecio);
                     
                     SqlBulkCopyColumnMapping mapProveedor =
-                    new SqlBulkCopyColumnMapping("Vendor", "ProveedorID");
+                    new SqlBulkCopyColumnMapping("PVEND", "ProveedorID");
                     bulkCopy.ColumnMappings.Add(mapProveedor);
 
                     SqlBulkCopyColumnMapping mapNombreProveedor =
-                    new SqlBulkCopyColumnMapping("Vendor Name", "NombreProveedor");
+                    new SqlBulkCopyColumnMapping("VNDNAM", "NombreProveedor");
                     bulkCopy.ColumnMappings.Add(mapNombreProveedor);
 
-                    //SqlBulkCopyColumnMapping mapDescripcion_P =
-                    //    new SqlBulkCopyColumnMapping("IDESC", "Descripcion_P");
-                    //bulkCopy.ColumnMappings.Add(mapDescripcion_P);
+                    SqlBulkCopyColumnMapping mapDescripcion_P =
+                        new SqlBulkCopyColumnMapping("IDESC", "Descripcion_P");
+                    bulkCopy.ColumnMappings.Add(mapDescripcion_P);
 
                     SqlBulkCopyColumnMapping mapUnidadMedida =
-                        new SqlBulkCopyColumnMapping("PO UoM", "UnidadMedida");
+                        new SqlBulkCopyColumnMapping("PUM", "UnidadMedida");
                     bulkCopy.ColumnMappings.Add(mapUnidadMedida);
 
-                    //SqlBulkCopyColumnMapping mapFacturaProveedor =
-                    //    new SqlBulkCopyColumnMapping("HVDUE", "FacturaProveedor");
-                    //bulkCopy.ColumnMappings.Add(mapFacturaProveedor);
+                    SqlBulkCopyColumnMapping mapFacturaProveedor =
+                        new SqlBulkCopyColumnMapping("HVDUE", "FacturaProveedor");
+                    bulkCopy.ColumnMappings.Add(mapFacturaProveedor);
 
-                    //SqlBulkCopyColumnMapping mapPais =
-                    //    new SqlBulkCopyColumnMapping("VCOUN", "Pais");
-                    //bulkCopy.ColumnMappings.Add(mapPais);
+                    SqlBulkCopyColumnMapping mapPais =
+                        new SqlBulkCopyColumnMapping("VCOUN", "Pais");
+                    bulkCopy.ColumnMappings.Add(mapPais);
 
                     SqlBulkCopyColumnMapping mapPlanta =
-                        new SqlBulkCopyColumnMapping("Plant", "Planta");
+                        new SqlBulkCopyColumnMapping("PWHSE", "Planta");
                     bulkCopy.ColumnMappings.Add(mapPlanta);
 
                     SqlBulkCopyColumnMapping mapMoneda =
-                        new SqlBulkCopyColumnMapping("Currency", "Moneda");
+                        new SqlBulkCopyColumnMapping("POCUR", "Moneda");
                     bulkCopy.ColumnMappings.Add(mapMoneda);
 
-                    //SqlBulkCopyColumnMapping mapProgramaId =
-                    //    new SqlBulkCopyColumnMapping("ICCOM", "ProgramaId");
-                    //bulkCopy.ColumnMappings.Add(mapProgramaId);
+                    SqlBulkCopyColumnMapping mapProgramaId =
+                        new SqlBulkCopyColumnMapping("ICCOM", "ProgramaId");
+                    bulkCopy.ColumnMappings.Add(mapProgramaId);
 
-                    //SqlBulkCopyColumnMapping mapDrawingId =
-                    //    new SqlBulkCopyColumnMapping("IDRAW", "DrawingId");
-                    //bulkCopy.ColumnMappings.Add(mapDrawingId);
+                    SqlBulkCopyColumnMapping mapDrawingId =
+                        new SqlBulkCopyColumnMapping("IDRAW", "DrawingId");
+                    bulkCopy.ColumnMappings.Add(mapDrawingId);
 
-                    //SqlBulkCopyColumnMapping mapText1 =
-                    //    new SqlBulkCopyColumnMapping("TEXT1", "Text1");
-                    //bulkCopy.ColumnMappings.Add(mapText1);
+                    SqlBulkCopyColumnMapping mapText1 =
+                        new SqlBulkCopyColumnMapping("TEXT1", "Text1");
+                    bulkCopy.ColumnMappings.Add(mapText1);
 
                     try
                     {
@@ -300,7 +310,7 @@ namespace MaterialCore
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+
                     }
                     finally
                     {
@@ -413,7 +423,7 @@ namespace MaterialCore
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString()); 
                     }
                     finally
                     {
@@ -425,6 +435,7 @@ namespace MaterialCore
                 }
             }
         }
+
         private void CopiarTablaBDMeQ(string Tabla, DataTable registros)
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MaterialCore.Properties.Settings.CoreConnectionString"].ConnectionString;
@@ -521,25 +532,27 @@ namespace MaterialCore
             }
         }
 
-        private void EjecutaPaquete(String fileName,string NombrePaquete)
+        private void EjecutaPaquete(String fileName, string NombrePaquete)
         {
-            
+
             FileStream fs = new FileStream(fileName,
                                    FileMode.Open,
                                    FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
             long numBytes = new FileInfo(fileName).Length;
-      
+
             SqlBytes archivo = new SqlBytes(br.ReadBytes((int)numBytes));
-            
+
 
             DataSets.GeneralTableAdapters.EjecutaPaquete Ejecuta = new MaterialCore.DataSets.GeneralTableAdapters.EjecutaPaquete();
             int? resultado = Ejecuta.RunPackage(NombrePaquete + ".csv", archivo.Value, NombrePaquete, "123");
 
-            //MessageBox.Show(resultado);
-            if (resultado == null) {
-                 MessageBox.Show("error");
-            }else if(resultado==0 ){
+            if (resultado == null)
+            {
+                MessageBox.Show("error");
+            }
+            else if (resultado == 0)
+            {
                 MessageBox.Show("The package executed successfully.");
             }
             else if (resultado == 1)
@@ -562,10 +575,9 @@ namespace MaterialCore
             {
                 MessageBox.Show("The utility encountered an internal error of syntactic or semantic errors in the command line.");
             }
-            
-        }
 
-
+        } 
+ 		 
         private void SincronizarOC()
         {
             Clases.Conexion conn = new MaterialCore.Clases.Conexion();
@@ -575,6 +587,7 @@ namespace MaterialCore
 
             conn.FinConexion();
         }
+
         private void SincronizarOCMeQ()
         {
             Clases.Conexion conn = new MaterialCore.Clases.Conexion();
@@ -584,6 +597,7 @@ namespace MaterialCore
 
             conn.FinConexion();
         }
+
         void CargarCSV(string dir)
         {
             int total_registros = RenglonesCSV(dir);
@@ -606,7 +620,7 @@ namespace MaterialCore
                 linea = archivo.ReadLine();
             }
             archivo.Close();
-            //MessageBox.Show("Archivo cargado a la base de datos con exito");
+            MessageBox.Show("Archivo cargado a la base de datos con exito");
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -624,19 +638,17 @@ namespace MaterialCore
                 {
                     lblDirCSV.Text =    System.Configuration.ConfigurationManager.AppSettings["dirCSV"].ToString();
                     btnCargar.Visible = false;
-                    //CargaArchivo(lblDirCSV.Text);
-                    EjecutaPaquete(lblDirCSV.Text,"Materiales");
+                    CargaArchivo(lblDirCSV.Text);
                     btnCargar.Visible = true;
                 }
               if( chkMeQ.Checked)
                 {
                     lblMeQ.Text = System.Configuration.ConfigurationManager.AppSettings["dirXLSMeQ"].ToString();
                     btnCargar.Visible = false;
-                    //CargaArchivoMeQ(lblMeQ.Text);
-                    EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo");
+                    CargaArchivoMeQ(lblMeQ.Text);
                     btnCargar.Visible = true;
                 }
-                //MessageBox.Show("Archivo cargado con éxito");
+                MessageBox.Show("Archivo cargado con éxito");
                 this.Close();
             }
             else //Modo manual
@@ -650,18 +662,34 @@ namespace MaterialCore
                 if (chkMat.Checked)
                 {
                     btnCargar.Visible = false;
-                    //CargaArchivo(lblDirCSV.Text);
-                    EjecutaPaquete(lblDirCSV.Text, "Materiales");
+                    if (ExtencionCSV(lblDirCSV.Text))
+                    {
+                        MessageBox.Show("Se utilizara el formato nuevo de archivo");
+                        tslblEstado.Text = "Ejecutando Paquete de Transformacion de datos...";
+                        EjecutaPaquete(lblDirCSV.Text, "Materiales");
+                    }
+                    else {
+                        CargaArchivo(lblDirCSV.Text);
+                    }
+                    
                     btnCargar.Visible = true;
                 }
                 if (chkMeQ.Checked)
                 {
                     btnCargar.Visible = false;
-                    //CargaArchivoMeQ(lblMeQ.Text);
-                    EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo");
+                    if (ExtencionCSV(lblMeQ.Text))
+                    {
+                        MessageBox.Show("Se utilizara el formato nuevo de archivo");
+                        tslblEstado.Text = "Ejecutando Paquete de Transformacion de datos...";
+                        EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo"); 
+                    }
+                    else {
+                        CargaArchivoMeQ(lblMeQ.Text);
+                    }
+                    
+                    
                     btnCargar.Visible = true;
-                }
-                //MessageBox.Show("Archivo cargado con éxito");
+                }               
                 this.Close();
             }
 
@@ -735,8 +763,6 @@ namespace MaterialCore
         }
 
 
-
-
         }
 
     public class ExcelProvider
@@ -763,7 +789,7 @@ namespace MaterialCore
         /// </summary>
 
         //private const string ConnectionStringTemplate = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties=Excel 8.0;";
-        private const string ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\'Excel 12.0 Xml;HDR=Yes;IMEX=1\'";
+        private const string ConnectionStringTemplate = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\'Excel 8.0;HDR=Yes;IMEX=1\'";
 
         /// <summary>
         /// Default constructor
@@ -786,12 +812,11 @@ namespace MaterialCore
             string connectionString = string.Format(ConnectionStringTemplate, FileName);
 
             // Query the specified worksheet
-            string sql_query = string.Format("SELECT " +
-                                               " ` PO  Number`, {1} AS ClienteId,Item,Material,`Material Description`,`Quantity Ordered`,`Quantity to be delivered`,` Std Cost`,Plant " +
-                                               ",`PO UoM`,Vendor,`Vendor Name`,Currency FROM [{0}$]", sheetName, _IdCLiente);
-
-            OleDbDataAdapter dataAdapter = new
-                    OleDbDataAdapter(sql_query, connectionString);
+            OleDbDataAdapter dataAdapter = new 
+                OleDbDataAdapter(string.Format("SELECT " +
+                                               "PORD, {1} AS IDCTE, PLINE, PPROD, PODESC, PQORD,PQREC, PECST, PWHSE, NULL as HVDUE," +
+                                               "ICCOM, IDESC, PUM, Llave, VCOUN, PVEND,	VNDNAM, POFAC,POCUR, PCQTY, IDRAW, TEXT1 " +
+                                               "FROM [{0}$]", sheetName, _IdCLiente), connectionString);
 
             // Fill the dataset from the data adapter
             DataSet myDataSet = new DataSet();
@@ -808,14 +833,12 @@ namespace MaterialCore
             // Build the connectionstring
             string connectionString = string.Format(ConnectionStringTemplate, FileName);
 
-            string sql_query = string.Format("SELECT " +
-                                              "PORD, {1} AS IDCTE, PLINE, PPROD, PODESC, PQORD,PQREC, PECST, PWHSE, NULL as HVDUE," +
-                                              "PUM, Llave,PVEND,VNDNAM, POFAC,POCUR, PCQTY " +
-                                              "FROM [{0}$Query_from_QHPOARM]", sheetName, _IdCLiente);// cambio para poder mostrar los encabezados
-
             // Query the specified worksheet
             OleDbDataAdapter dataAdapter = new
-                OleDbDataAdapter(sql_query, connectionString);
+                OleDbDataAdapter(string.Format("SELECT " +
+                                               "PORD, {1} AS IDCTE, PLINE, PPROD, PODESC, PQORD,PQREC, PECST, PWHSE, NULL as HVDUE," +
+                                               "  PUM, Llave,  PVEND,	VNDNAM, POFAC,POCUR, PCQTY " +
+                                               "FROM [{0}$]", sheetName, _IdCLiente), connectionString);
             //dataAdapter.SelectCommand.Parameters.AddWithValue("@PORD","''");
             // Fill the dataset from the data adapter
             DataSet myDataSet = new DataSet();

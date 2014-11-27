@@ -15,6 +15,7 @@ public partial class UserDefinedFunctions
         try
         {
             //validar si existe
+            File.Delete(@"c:\temp\runpackage.log");
             File.Delete(@"c:\temp\" + NombreArchivo);
             File.Delete(@"c:\temp\" + NombrePaquete + ".dtsx");
             ExtractEmbeddedResource(@"c:\temp", "EjecutaPaquete", NombrePaquete + ".dtsx");
@@ -27,7 +28,7 @@ public partial class UserDefinedFunctions
             _FileStream.Write(barchivo, 0, (int)barchivo.Length);
             _FileStream.Close();
 
-            string filepath = @"\Package.Variables[User::filepath].Properties[Value];""" + @"c:\temp\" + NombreArchivo + @""" ";
+            string filepath = @" ""\Package.Variables[User::filepath].Properties[Value];c:\temp\" + NombreArchivo + @""" ";
             int result = ExecuteDTExec(@"""C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\DTExec.exe"" ", PassPaquete, @"c:\Temp\" + NombrePaquete + ".dtsx", filepath);
 
             return result;
@@ -67,7 +68,7 @@ public partial class UserDefinedFunctions
             info.RedirectStandardError = false;
             info.UseShellExecute = false;
             info.CreateNoWindow = true;
-            info.Arguments = string.Format(@"/f " + paquete + " /DECRYPT " + packpass + " /set " + variables);
+            info.Arguments = string.Format(@"/f """ + paquete + @""" /DECRYPT " + packpass + @" /vlog ""c:\temp\runpackage.log"" " + " /set " + variables);
 
             int processResults;
             using (Process p = Process.Start(info))

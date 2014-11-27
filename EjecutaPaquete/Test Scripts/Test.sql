@@ -12,5 +12,7 @@
 
 
 DECLARE @FILE AS varbinary(max)
-SET @FILE = (SELECT  BulkColumn FROM OPENROWSET(BULK N'C:\RAWPO.CSV', SINGLE_BLOB) rs)
-SELECT dbo.RunPackage('materiales.csv',@FILE,'Materiales','123')
+SET @FILE = (SELECT  BulkColumn FROM OPENROWSET(BULK N'C:\Temp\MaquinariaEquipo.csv', SINGLE_BLOB) rs)
+--MaquinariaEquipo,@file,'MaquinariaEquipo','123'
+SELECT dbo.RunPackage('MaquinariaEquipo.csv',@FILE,'MaquinariaEquipo','123')
+--SELECT dbo.RunPackage('materiales.csv',@FILE,'Materiales','123')
