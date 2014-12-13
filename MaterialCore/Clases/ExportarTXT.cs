@@ -30,7 +30,7 @@ namespace MaterialCore.Clases
                     FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 5, TextAlignment.Right) + " " +
                             FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 16, TextAlignment.Left) +
                             FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 7, TextAlignment.Left) +
-                            FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 3, TextAlignment.Right), 4, TextAlignment.Left) +
+                            FormatoCampoEspacios(Convert.ToString(txtDT[i]["RenglonId"]), 4, TextAlignment.Left) +
                             FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 16, TextAlignment.Left) +
                             FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["CantidadRecibida"]), 12, 2, TextAlignment.Right), 13, TextAlignment.Left) +
                             FormatoCampoEspacios(Convert.ToString(txtDT[i]["UnidadMedida"]), 3, TextAlignment.Left);
@@ -110,7 +110,7 @@ namespace MaterialCore.Clases
                         FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 10, TextAlignment.Right) + " " + "," +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 30, TextAlignment.Left) + "," +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 20, TextAlignment.Left) + "," +
-                                FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 10, TextAlignment.Right), 10, TextAlignment.Left) + "," +
+                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["RenglonId"]), 10, TextAlignment.Left) + "," +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 30, TextAlignment.Left) + "," +
                                 FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["CantidadRecibida"]), 12, 2, TextAlignment.Right), 12, TextAlignment.Left) + "," +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["UnidadMedida"]), 2, TextAlignment.Left) + ",";
@@ -198,7 +198,7 @@ namespace MaterialCore.Clases
                         FormatoCampoCeros(Convert.ToString(txtDT[i]["ProveedorId"]), 10, TextAlignment.Right) + " " +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaProveedor"]), 30, TextAlignment.Left) + " " +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["Id"]), 20, TextAlignment.Left) + " " +
-                                FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["RenglonId"]), 10, TextAlignment.Right), 10, TextAlignment.Left) + " " +
+                                FormatoCampoEspacios(Convert.ToString(txtDT[i]["RenglonId"]), 10, TextAlignment.Left) + " " +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 30, TextAlignment.Left) + " " +
                                 FormatoCampoEspacios(FormatoCampoDecimal(Convert.ToString(txtDT[i]["CantidadRecibida"]), 12, 2, TextAlignment.Right), 12, TextAlignment.Left) + " " +
                                 FormatoCampoEspacios(Convert.ToString(txtDT[i]["UnidadMedida"]), 2, TextAlignment.Left)+ " " ;
@@ -295,7 +295,7 @@ namespace MaterialCore.Clases
                     linea += FormatoCampoCeros(Convert.ToString(txtDT[i]["Proveedor"]), 10, TextAlignment.Right) + " " ;
                     linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["FacturaImportacion"]), 30, TextAlignment.Left) + " ";
                     linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["numPO"]), 20, TextAlignment.Left) + " ";
-                    linea += FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["LineaPO"]), 3, TextAlignment.Right), 4, TextAlignment.Left) + " ";
+                    linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["LineaPO"]), 4, TextAlignment.Left) + " ";
                     linea += FormatoCampoEspacios(FormatoCampoCeros(Convert.ToString(txtDT[i]["Hijo"]), 2, TextAlignment.Right), 3, TextAlignment.Left) + " ";
                     //linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 16 + 8, TextAlignment.Left) ;
                     linea += FormatoCampoEspacios(Convert.ToString(txtDT[i]["NumeroParte"]), 30, TextAlignment.Left) + " ";
