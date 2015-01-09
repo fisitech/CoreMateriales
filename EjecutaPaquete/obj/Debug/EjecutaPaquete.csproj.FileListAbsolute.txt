@@ -3,3 +3,8 @@ C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\CoreMateriales\EjecutaPaq
 C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\CoreMateriales\EjecutaPaquete\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\CoreMateriales\EjecutaPaquete\obj\Debug\EjecutaPaquete.dll
 C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\CoreMateriales\EjecutaPaquete\obj\Debug\EjecutaPaquete.pdb
+C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\EjecutaPaquete\bin\Debug\EjecutaPaquete.dll
+C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\EjecutaPaquete\bin\Debug\EjecutaPaquete.pdb
+C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\EjecutaPaquete\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\EjecutaPaquete\obj\Debug\EjecutaPaquete.dll
+C:\Users\sitek 1\Documents\Proyectos\AI\CoreMateriales\EjecutaPaquete\obj\Debug\EjecutaPaquete.pdb
