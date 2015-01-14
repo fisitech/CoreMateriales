@@ -270,7 +270,7 @@ namespace MaterialCore
                 txtMoneda.Text = quimicos.MaterialesOC[materialesOCBindingSource.Position]["Moneda"].ToString();
                 txtMoneda1.Text = quimicos.MaterialesOC[materialesOCBindingSource.Position]["Moneda"].ToString();
                 txtPlantaOriginal.Text = quimicos.MaterialesOC[materialesOCBindingSource.Position]["Planta"].ToString();
-                txtPrecio.Text = Convert.ToDecimal(quimicos.MaterialesOC[materialesOCBindingSource.Position]["Precio"]).ToString("N2");
+                txtPrecio.Text = quimicos.MaterialesOC[materialesOCBindingSource.Position]["Precio"].ToString();
 
 
 
@@ -283,7 +283,7 @@ namespace MaterialCore
                     txtPlanta.Enabled = false;
                 }
 
-                txtCantidadRecibida.Text = Convert.ToDecimal(quimicos.MaterialesOC[materialesOCBindingSource.Position]["CantidadAbierta"]).ToString("N0");
+                txtCantidadRecibida.Text = quimicos.MaterialesOC[materialesOCBindingSource.Position]["CantidadAbierta"].ToString();
      //           string Noguia = quimicos.MaterialesOC[materialesOCBindingSource.Position]["NoGuia"].ToString();
 
         /*        if (Noguia != "")
@@ -1563,7 +1563,7 @@ decimal Precio
                                                     "WHERE (MaterialesOCId = {0})     " + 
                                                     "AND (ClienteID = {1})    " + 
                                                     " AND (RenglonId = {2})     " + 
-                                                    " AND (NumeroParte = {3})     " + 
+                                                    " AND (NumeroParte = '{3}')     " + 
                                                     " AND (FacturaProveedor = '{4}')",PO,IdCliente,Renglon,NoParte,FacturaProveedor);
 
             datos = conn.getLector(sql);

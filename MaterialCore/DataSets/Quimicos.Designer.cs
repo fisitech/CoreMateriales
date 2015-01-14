@@ -1345,7 +1345,7 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public MaterialesOCPORow AddMaterialesOCPORow(int Id) {
+            public MaterialesOCPORow AddMaterialesOCPORow(long Id) {
                 MaterialesOCPORow rowMaterialesOCPORow = ((MaterialesOCPORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id};
@@ -1355,7 +1355,7 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public MaterialesOCPORow FindById(int Id) {
+            public MaterialesOCPORow FindById(long Id) {
                 return ((MaterialesOCPORow)(this.Rows.Find(new object[] {
                             Id})));
             }
@@ -1384,7 +1384,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
@@ -2312,9 +2312,9 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int Id {
+            public long Id {
                 get {
-                    return ((int)(this[this.tableMaterialesOCPO.IdColumn]));
+                    return ((long)(this[this.tableMaterialesOCPO.IdColumn]));
                 }
                 set {
                     this[this.tableMaterialesOCPO.IdColumn] = value;
@@ -4279,7 +4279,7 @@ WHERE     (Id = @Id) AND (RenglonId = @RenglonId)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DISTINCT Id\r\nFROM         MaterialesOC";
+            this._commandCollection[0].CommandText = "SELECT DISTINCT Id\r\nFROM            MaterialesOC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
