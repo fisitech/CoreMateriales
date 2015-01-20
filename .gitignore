@@ -1,2 +1,3 @@
-MaterialCore/bin
-MaterialCore/obj
+*.exe
+MaterialCore/bin/*
+MaterialCore/obj/*
