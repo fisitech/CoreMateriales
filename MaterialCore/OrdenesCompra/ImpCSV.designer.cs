@@ -139,9 +139,9 @@ namespace MaterialCore
             // 
             this.btnCargar.Location = new System.Drawing.Point(352, 268);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(76, 28);
+            this.btnCargar.Size = new System.Drawing.Size(90, 28);
             this.btnCargar.TabIndex = 11;
-            this.btnCargar.Text = "&Cargar";
+            this.btnCargar.Text = "&Cargar BPCS";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
@@ -239,11 +239,11 @@ namespace MaterialCore
             // 
             // btnNuevoFormato
             // 
-            this.btnNuevoFormato.Location = new System.Drawing.Point(430, 268);
+            this.btnNuevoFormato.Location = new System.Drawing.Point(448, 268);
             this.btnNuevoFormato.Name = "btnNuevoFormato";
-            this.btnNuevoFormato.Size = new System.Drawing.Size(89, 28);
+            this.btnNuevoFormato.Size = new System.Drawing.Size(71, 28);
             this.btnNuevoFormato.TabIndex = 20;
-            this.btnNuevoFormato.Text = "Nuevo Formato";
+            this.btnNuevoFormato.Text = "Cargar SAP";
             this.btnNuevoFormato.UseVisualStyleBackColor = true;
             this.btnNuevoFormato.Click += new System.EventHandler(this.btnNuevoFormato_Click);
             // 
