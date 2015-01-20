@@ -661,33 +661,15 @@ namespace MaterialCore
 
                 if (chkMat.Checked)
                 {
-                    btnCargar.Visible = false;
-                    if (ExtencionCSV(lblDirCSV.Text))
-                    {
-                        MessageBox.Show("Se utilizara el formato nuevo de archivo");
-                        tslblEstado.Text = "Ejecutando Paquete de Transformacion de datos...";
-                        EjecutaPaquete(lblDirCSV.Text, "Materiales");
-                    }
-                    else {
-                        CargaArchivo(lblDirCSV.Text);
-                    }
-                    
+                    btnCargar.Visible = false;                    
+                    CargaArchivo(lblDirCSV.Text);
                     btnCargar.Visible = true;
                 }
+
                 if (chkMeQ.Checked)
                 {
                     btnCargar.Visible = false;
-                    if (ExtencionCSV(lblMeQ.Text))
-                    {
-                        MessageBox.Show("Se utilizara el formato nuevo de archivo");
-                        tslblEstado.Text = "Ejecutando Paquete de Transformacion de datos...";
-                        EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo"); 
-                    }
-                    else {
-                        CargaArchivoMeQ(lblMeQ.Text);
-                    }
-                    
-                    
+                    CargaArchivoMeQ(lblMeQ.Text);
                     btnCargar.Visible = true;
                 }               
                 this.Close();
@@ -760,6 +742,57 @@ namespace MaterialCore
 
             if (resultado == DialogResult.OK)
                 lblMeQ.Text = dialogo.FileName.ToString();
+        }
+
+        private void btnNuevoFormato_Click(object sender, EventArgs e)
+        {
+            if (rbtAutomatico.Checked)
+            {
+                if (!chkMat.Checked && !chkMeQ.Checked)
+                {
+                    MessageBox.Show("Debe de especificar que archivos va a cargar");
+                    return;
+                }
+
+                if (chkMat.Checked)
+                {
+                    lblDirCSV.Text = System.Configuration.ConfigurationManager.AppSettings["dirCSV"].ToString();
+                    btnCargar.Visible = false;
+                    EjecutaPaquete(lblDirCSV.Text, "Materiales");  
+                    btnCargar.Visible = true;
+                }
+                if (chkMeQ.Checked)
+                {
+                    lblMeQ.Text = System.Configuration.ConfigurationManager.AppSettings["dirXLSMeQ"].ToString();
+                    btnCargar.Visible = false;
+                    EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo");
+                    btnCargar.Visible = true;
+                }
+            }
+            else //Modo manual
+            {
+                if (!chkMat.Checked && !chkMeQ.Checked)
+                {
+                    MessageBox.Show("Debe de especificar que archivo va a cargar");
+                    return;
+                }
+
+                if (chkMat.Checked)
+                {
+                    btnCargar.Visible = false;
+                    tslblEstado.Text = "Ejecutando Paquete de Transformacion de datos...";
+                    EjecutaPaquete(lblDirCSV.Text, "Materiales");                    
+                    btnCargar.Visible = true;
+                }
+                if (chkMeQ.Checked)
+                {
+                    btnCargar.Visible = false;
+                    tslblEstado.Text = "Ejecutando Paquete de Transformacion de datos...";
+                    EjecutaPaquete(lblMeQ.Text, "MaquinariaEquipo");
+                    btnCargar.Visible = true;
+                }
+                this.Close();
+            }
         }
 
 

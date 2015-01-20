@@ -47,6 +47,7 @@ namespace MaterialCore
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnBuscarMeQ = new System.Windows.Forms.Button();
             this.lblMeQ = new System.Windows.Forms.Label();
+            this.btnNuevoFormato = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -116,7 +117,6 @@ namespace MaterialCore
             this.lblDirCSV.Size = new System.Drawing.Size(336, 49);
             this.lblDirCSV.TabIndex = 6;
             this.lblDirCSV.Text = "C:\\la que esta en el archivo de config\\mas bnombre.ext";
-            
             // 
             // btnBuscar
             // 
@@ -132,12 +132,12 @@ namespace MaterialCore
             // 
             this.Barra.Location = new System.Drawing.Point(12, 268);
             this.Barra.Name = "Barra";
-            this.Barra.Size = new System.Drawing.Size(421, 28);
+            this.Barra.Size = new System.Drawing.Size(334, 28);
             this.Barra.TabIndex = 8;
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(444, 268);
+            this.btnCargar.Location = new System.Drawing.Point(352, 268);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(76, 28);
             this.btnCargar.TabIndex = 11;
@@ -237,11 +237,22 @@ namespace MaterialCore
             this.lblMeQ.TabIndex = 17;
             this.lblMeQ.Text = "C:\\la que esta en el archivo de config\\mas bnombre.ext";
             // 
+            // btnNuevoFormato
+            // 
+            this.btnNuevoFormato.Location = new System.Drawing.Point(430, 268);
+            this.btnNuevoFormato.Name = "btnNuevoFormato";
+            this.btnNuevoFormato.Size = new System.Drawing.Size(89, 28);
+            this.btnNuevoFormato.TabIndex = 20;
+            this.btnNuevoFormato.Text = "Nuevo Formato";
+            this.btnNuevoFormato.UseVisualStyleBackColor = true;
+            this.btnNuevoFormato.Click += new System.EventHandler(this.btnNuevoFormato_Click);
+            // 
             // ImpCSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 332);
+            this.Controls.Add(this.btnNuevoFormato);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.statusStrip1);
@@ -288,5 +299,6 @@ namespace MaterialCore
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblMeQ;
         private System.Windows.Forms.Button btnBuscarMeQ;
+        private System.Windows.Forms.Button btnNuevoFormato;
     }
 }
