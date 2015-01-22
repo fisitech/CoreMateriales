@@ -235,7 +235,7 @@ namespace MaterialCore.MaterialesMQ
             // txtOCId
             // 
             this.txtOCId.Location = new System.Drawing.Point(138, 8);
-            this.txtOCId.MaxLength = 6;
+            this.txtOCId.MaxLength = 10;
             this.txtOCId.Name = "txtOCId";
             this.txtOCId.Size = new System.Drawing.Size(128, 20);
             this.txtOCId.TabIndex = 1;
@@ -1142,16 +1142,16 @@ namespace MaterialCore.MaterialesMQ
             // txtBuscarPO
             // 
             this.txtBuscarPO.Location = new System.Drawing.Point(32, 15);
-            this.txtBuscarPO.MaxLength = 6;
+            this.txtBuscarPO.MaxLength = 10;
             this.txtBuscarPO.Name = "txtBuscarPO";
-            this.txtBuscarPO.Size = new System.Drawing.Size(48, 20);
+            this.txtBuscarPO.Size = new System.Drawing.Size(83, 20);
             this.txtBuscarPO.TabIndex = 1;
             this.txtBuscarPO.TextChanged += new System.EventHandler(this.txtBuscarPO_TextChanged);
             this.txtBuscarPO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarPO_KeyPress);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(91, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(119, 13);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 23);
             this.btnBuscar.TabIndex = 3;

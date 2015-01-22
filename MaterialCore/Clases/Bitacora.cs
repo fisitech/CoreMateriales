@@ -36,7 +36,7 @@ namespace MaterialCore.Clases
 
         /*Materia Prima*/
 
-        public void MatInserto(int IdPartida, int PO, int Linea, string NoGuia)
+        public void MatInserto(int IdPartida, System.Int64 PO, int Linea, string NoGuia)
         {
             _adaptador.InsertQuery(Usuario, Mat, Inserto, IdPartida, PO, Linea, NoGuia, null);
         }
@@ -46,22 +46,22 @@ namespace MaterialCore.Clases
             _adaptador.InsertQuery(Usuario, Mat, CreaDespacho, null, null, null, null, Despacho);
         }
 
-        public void MatINBOUNDAutomatico(int IdPartida, int PO, int Linea, string NoGuia)
+        public void MatINBOUNDAutomatico(int IdPartida, System.Int64 PO, int Linea, string NoGuia)
         {
             _adaptador.InsertQuery(Usuario, Mat, Inserto, IdPartida, PO, Linea, NoGuia, "INBOUND AUTOMATICO");
         }
 
-        public void MatActualizo(int IdPartida, int PO, int Linea, string NoGuia)
+        public void MatActualizo(int IdPartida, System.Int64 PO, int Linea, string NoGuia)
         {
             _adaptador.InsertQuery(Usuario, Mat, Actualizo, IdPartida, PO, Linea, NoGuia, null);
         }
 
-        public void MatDesmarco(int IdPartida, int PO, int Linea, string NoGuia)
+        public void MatDesmarco(int IdPartida, System.Int64 PO, int Linea, string NoGuia)
         {
             _adaptador.InsertQuery(Usuario, Mat, Desmarco, IdPartida, PO, Linea, NoGuia, null);
         }
 
-       public  void MatBorro(int IdPartida, int PO, int Linea, string NoGuia)
+        public void MatBorro(int IdPartida, System.Int64 PO, int Linea, string NoGuia)
         {
             _adaptador.InsertQuery(
                 Usuario, Mat, Borro, IdPartida, PO, Linea, NoGuia, null);
@@ -83,7 +83,7 @@ namespace MaterialCore.Clases
 
         /*Maquinaria y Equipo*/
 
-        public void MeqInserto(int IdPartida, int PO, int Linea, string NoGuia, bool hijo)
+        public void MeqInserto(int IdPartida, long PO, int Linea, string NoGuia, bool hijo)
         {
             if(hijo)
                  _adaptador.InsertQuery(Usuario, Meq, Inserto, IdPartida, PO, Linea, NoGuia, "Hijo");
@@ -95,7 +95,7 @@ namespace MaterialCore.Clases
         {
                _adaptador.InsertQuery(Usuario, Meq, Clono, IdPartida,null,null,null,null);
         }
-        public void MeqActualizo(int IdPartida, int PO, int Linea, string NoGuia)
+        public void MeqActualizo(int IdPartida, long PO, int Linea, string NoGuia)
         {
             _adaptador.InsertQuery(Usuario, Meq, Actualizo, IdPartida, PO, Linea, NoGuia, null);
         }

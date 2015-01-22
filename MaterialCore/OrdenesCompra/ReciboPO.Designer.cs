@@ -190,7 +190,7 @@ namespace MaterialCore
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.idDataGridViewTextBoxColumn.Width = 54;
+            this.idDataGridViewTextBoxColumn.Width = 53;
             // 
             // gPlanta
             // 
@@ -200,7 +200,7 @@ namespace MaterialCore
             this.gPlanta.Name = "gPlanta";
             this.gPlanta.ReadOnly = true;
             this.gPlanta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.gPlanta.Width = 44;
+            this.gPlanta.Width = 43;
             // 
             // renglonIdDataGridViewTextBoxColumn
             // 
@@ -210,7 +210,7 @@ namespace MaterialCore
             this.renglonIdDataGridViewTextBoxColumn.Name = "renglonIdDataGridViewTextBoxColumn";
             this.renglonIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.renglonIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.renglonIdDataGridViewTextBoxColumn.Width = 58;
+            this.renglonIdDataGridViewTextBoxColumn.Width = 57;
             // 
             // gNumeroParte
             // 
@@ -220,7 +220,7 @@ namespace MaterialCore
             this.gNumeroParte.Name = "gNumeroParte";
             this.gNumeroParte.ReadOnly = true;
             this.gNumeroParte.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.gNumeroParte.Width = 79;
+            this.gNumeroParte.Width = 78;
             // 
             // gDrawingId
             // 
@@ -242,7 +242,7 @@ namespace MaterialCore
             this.CantidadAbierta.Name = "CantidadAbierta";
             this.CantidadAbierta.ReadOnly = true;
             this.CantidadAbierta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.CantidadAbierta.Width = 75;
+            this.CantidadAbierta.Width = 74;
             // 
             // cantidadOriginalDataGridViewTextBoxColumn
             // 
@@ -254,7 +254,7 @@ namespace MaterialCore
             this.cantidadOriginalDataGridViewTextBoxColumn.Name = "cantidadOriginalDataGridViewTextBoxColumn";
             this.cantidadOriginalDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadOriginalDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.cantidadOriginalDataGridViewTextBoxColumn.Width = 77;
+            this.cantidadOriginalDataGridViewTextBoxColumn.Width = 76;
             // 
             // CantidadRecibida
             // 
@@ -266,7 +266,7 @@ namespace MaterialCore
             this.CantidadRecibida.Name = "CantidadRecibida";
             this.CantidadRecibida.ReadOnly = true;
             this.CantidadRecibida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.CantidadRecibida.Width = 84;
+            this.CantidadRecibida.Width = 83;
             // 
             // precioDataGridViewTextBoxColumn
             // 
@@ -278,7 +278,7 @@ namespace MaterialCore
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             this.precioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.precioDataGridViewTextBoxColumn.Width = 44;
+            this.precioDataGridViewTextBoxColumn.Width = 43;
             // 
             // NoGuia
             // 
@@ -288,7 +288,7 @@ namespace MaterialCore
             this.NoGuia.Name = "NoGuia";
             this.NoGuia.ReadOnly = true;
             this.NoGuia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.NoGuia.Width = 50;
+            this.NoGuia.Width = 49;
             // 
             // gSkipLot
             // 
@@ -343,7 +343,7 @@ namespace MaterialCore
             // txtNumeroPo
             // 
             this.txtNumeroPo.Location = new System.Drawing.Point(105, 31);
-            this.txtNumeroPo.MaxLength = 6;
+            this.txtNumeroPo.MaxLength = 10;
             this.txtNumeroPo.Name = "txtNumeroPo";
             this.txtNumeroPo.ReadOnly = true;
             this.txtNumeroPo.Size = new System.Drawing.Size(146, 20);
@@ -825,7 +825,7 @@ namespace MaterialCore
             // txtBuscarPO
             // 
             this.txtBuscarPO.Location = new System.Drawing.Point(95, 7);
-            this.txtBuscarPO.MaxLength = 6;
+            this.txtBuscarPO.MaxLength = 10;
             this.txtBuscarPO.Name = "txtBuscarPO";
             this.txtBuscarPO.Size = new System.Drawing.Size(98, 20);
             this.txtBuscarPO.TabIndex = 1;

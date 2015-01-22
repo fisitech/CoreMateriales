@@ -1308,7 +1308,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public MaterialesSinEnviarRow AddMaterialesSinEnviarRow(
-                        int MaterialesOCId, 
+                        long MaterialesOCId, 
                         int ClienteID, 
                         int RenglonId, 
                         decimal CantidadRecibida, 
@@ -1404,7 +1404,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnMaterialesOCId = new global::System.Data.DataColumn("MaterialesOCId", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnMaterialesOCId = new global::System.Data.DataColumn("MaterialesOCId", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaterialesOCId);
                 this.columnClienteID = new global::System.Data.DataColumn("ClienteID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClienteID);
@@ -3519,7 +3519,7 @@ namespace MaterialCore.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public MaterialesEnviarRow AddMaterialesEnviarRow(
                         int MaterialesPaletasId, 
-                        int MaterialesOCId, 
+                        long MaterialesOCId, 
                         int ClienteID, 
                         int RenglonId, 
                         decimal CantidadRecibida, 
@@ -3602,7 +3602,7 @@ namespace MaterialCore.DataSets {
                 base.Columns.Add(this.columnId);
                 this.columnMaterialesPaletasId = new global::System.Data.DataColumn("MaterialesPaletasId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaterialesPaletasId);
-                this.columnMaterialesOCId = new global::System.Data.DataColumn("MaterialesOCId", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnMaterialesOCId = new global::System.Data.DataColumn("MaterialesOCId", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaterialesOCId);
                 this.columnClienteID = new global::System.Data.DataColumn("ClienteID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClienteID);
@@ -7140,9 +7140,9 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int MaterialesOCId {
+            public long MaterialesOCId {
                 get {
-                    return ((int)(this[this.tableMaterialesSinEnviar.MaterialesOCIdColumn]));
+                    return ((long)(this[this.tableMaterialesSinEnviar.MaterialesOCIdColumn]));
                 }
                 set {
                     this[this.tableMaterialesSinEnviar.MaterialesOCIdColumn] = value;
@@ -8599,9 +8599,9 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int MaterialesOCId {
+            public long MaterialesOCId {
                 get {
-                    return ((int)(this[this.tableMaterialesEnviar.MaterialesOCIdColumn]));
+                    return ((long)(this[this.tableMaterialesEnviar.MaterialesOCIdColumn]));
                 }
                 set {
                     this[this.tableMaterialesEnviar.MaterialesOCIdColumn] = value;

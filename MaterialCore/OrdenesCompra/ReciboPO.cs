@@ -389,7 +389,7 @@ namespace MaterialCore
             //    return;
             //}
 
-                if(!ValidaPartida( Convert.ToInt32(txtNumeroPo.Text)   ,70, Convert.ToInt32(txtRenglonID.Text), txtNumeroParte.Text,txtFacturaProveedor.Text))
+                if(!ValidaPartida( Convert.ToInt64(txtNumeroPo.Text)   ,70, Convert.ToInt32(txtRenglonID.Text), txtNumeroParte.Text,txtFacturaProveedor.Text))
                 {
                     //int PO = Convert.ToInt32(txtNumeroPo.Text);
                     //int IdCliente = 70;
@@ -506,7 +506,7 @@ namespace MaterialCore
                     txtComentario.Text,
                                                Convert.ToInt32(txtBultos.Text),
                                                txtNoGuia.Text,
-                                               Convert.ToInt32(txtNumeroPo.Text),
+                                               Convert.ToInt64(txtNumeroPo.Text),
                                                Convert.ToInt32(txtRenglonID.Text));
 
                 //Si la ventana se abre desde el menu principal
@@ -515,7 +515,7 @@ namespace MaterialCore
 
                     _Bitacora.MatInserto(
 
-     Convert.ToInt32(this.InsertaMaterialesEnviar(Convert.ToInt32(txtNumeroPo.Text),
+     Convert.ToInt32(this.InsertaMaterialesEnviar(Convert.ToInt64(txtNumeroPo.Text),
                                           70,
                                           Convert.ToInt32(txtRenglonID.Text),
                                           Convert.ToDecimal(txtCantidadRecibida.Text),
@@ -535,7 +535,7 @@ namespace MaterialCore
                                           txtProgramaID.Text,
                                           Convert.ToDecimal(txtPrecio.Text)
 
-                                           )), Convert.ToInt32(txtNumeroPo.Text),
+                                           )), Convert.ToInt64(txtNumeroPo.Text),
                                                 Convert.ToInt32(txtRenglonID.Text),
                                                      txtNoGuia.Text);
               
@@ -545,7 +545,7 @@ namespace MaterialCore
                 {
                        _Bitacora.MatInserto(
 
-     Convert.ToInt32(this.ModificaraMaterialesEnviar(Convert.ToInt32(txtNumeroPo.Text),
+     Convert.ToInt32(this.ModificaraMaterialesEnviar(Convert.ToInt64(txtNumeroPo.Text),
                                                 70,
                                                 Convert.ToInt32(txtRenglonID.Text),
                                                 Convert.ToDecimal(txtCantidadRecibida.Text),
@@ -565,7 +565,7 @@ namespace MaterialCore
                                                 txtProgramaID.Text,
                                                 Convert.ToDecimal(txtPrecio.Text)
 
-                                               )), Convert.ToInt32(txtNumeroPo.Text),
+                                               )), Convert.ToInt64(txtNumeroPo.Text),
                                                 Convert.ToInt32(txtRenglonID.Text),
                                                      txtNoGuia.Text);
                 }
@@ -574,7 +574,7 @@ namespace MaterialCore
             else
             {
                 //else para guardar inbound automatico
-                InboundAutomatico(Convert.ToInt32( txtNumeroPo.Text));
+                InboundAutomatico(Convert.ToInt64( txtNumeroPo.Text));
 
 
 
@@ -670,7 +670,7 @@ namespace MaterialCore
             this.BuscarPO();
         }
 
-        private int InsertaMaterialesEnviar(int MaterialesOCId, int ClienteID, int RenglonId, Decimal CantidadRecibida, string Guia, string Planta,string FacturaProveedor,
+        private int InsertaMaterialesEnviar(System.Int64 MaterialesOCId, int ClienteID, int RenglonId, Decimal CantidadRecibida, string Guia, string Planta,string FacturaProveedor,
                                                 string	NumeroParte ,
                                                 string	Descripcion ,
                                                 string	ProveedorId ,
@@ -770,7 +770,7 @@ namespace MaterialCore
 
         }
 
-        private int ModificaraMaterialesEnviar(int MaterialesOCId, int ClienteID, int RenglonId, Decimal CantidadRecibida, string Guia, string Planta,string FacturaProveedor,
+        private int ModificaraMaterialesEnviar(System.Int64 MaterialesOCId, int ClienteID, int RenglonId, Decimal CantidadRecibida, string Guia, string Planta,string FacturaProveedor,
                         string NumeroParte,
 string Descripcion,
 string ProveedorId,
@@ -1048,7 +1048,7 @@ decimal Precio
                                             txtMoneda.Text,
                                             txtProgramaID.Text,
                                                  txtNoGuia.Text,
-                                            Convert.ToInt32(txtNumeroPo.Text),
+                                            Convert.ToInt64(txtNumeroPo.Text),
                                             Convert.ToInt32(txtRenglonID.Text));
             
  
@@ -1547,7 +1547,7 @@ decimal Precio
 
 
 
-        bool ValidaPartida(int PO, int IdCliente, int Renglon, string NoParte, string FacturaProveedor)
+        bool ValidaPartida(System.Int64 PO, int IdCliente, int Renglon, string NoParte, string FacturaProveedor)
         {
             bool resultado = true;
 
@@ -1582,7 +1582,7 @@ decimal Precio
 
 
 
-        void InboundAutomatico(int PO)
+        void InboundAutomatico(System.Int64 PO)
         {
             DataSets.QuimicosTableAdapters.MaterialesOCTableAdapter taPO = new MaterialCore.DataSets.QuimicosTableAdapters.MaterialesOCTableAdapter();
             DataSets.Quimicos.MaterialesOCDataTable tabla = new MaterialCore.DataSets.Quimicos.MaterialesOCDataTable();

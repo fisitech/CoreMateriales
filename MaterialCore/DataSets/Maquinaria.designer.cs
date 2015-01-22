@@ -820,7 +820,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public MaterialesMaquinariaRow AddMaterialesMaquinariaRow(
-                        int MaterialesOCId, 
+                        long MaterialesOCId, 
                         int ClienteId, 
                         int RenglonId, 
                         string NumeroParte, 
@@ -957,7 +957,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnMaterialesOCId = new global::System.Data.DataColumn("MaterialesOCId", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnMaterialesOCId = new global::System.Data.DataColumn("MaterialesOCId", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaterialesOCId);
                 this.columnClienteId = new global::System.Data.DataColumn("ClienteId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClienteId);
@@ -1969,7 +1969,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public MaterialesOCMeQRow AddMaterialesOCMeQRow(
-                        int Id, 
+                        long Id, 
                         int ClienteId, 
                         int RenglonId, 
                         string NumeroParte, 
@@ -2055,7 +2055,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
                 this.columnClienteId = new global::System.Data.DataColumn("ClienteId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClienteId);
@@ -3442,10 +3442,10 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int MaterialesOCId {
+            public long MaterialesOCId {
                 get {
                     try {
-                        return ((int)(this[this.tableMaterialesMaquinaria.MaterialesOCIdColumn]));
+                        return ((long)(this[this.tableMaterialesMaquinaria.MaterialesOCIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'MaterialesOCId\' in table \'MaterialesMaquinaria\' is DBNull.", e);
@@ -4841,9 +4841,9 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int Id {
+            public long Id {
                 get {
-                    return ((int)(this[this.tableMaterialesOCMeQ.IdColumn]));
+                    return ((long)(this[this.tableMaterialesOCMeQ.IdColumn]));
                 }
                 set {
                     this[this.tableMaterialesOCMeQ.IdColumn] = value;
@@ -6509,7 +6509,7 @@ WHERE     (Id = @id)
 VALUES     (@MaterialesOCId,@ClienteId,@RenglonId,@Descripcion,@UnidadMedida,@Proveedor,@Moneda,@Consecutivo,@PqOrd,@PqRec,@NombreProveedor);   
                           SELECT     @@IDENTITY";
             this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaterialesOCId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MaterialesOCId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaterialesOCId", global::System.Data.SqlDbType.BigInt, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MaterialesOCId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClienteId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RenglonId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6528,7 +6528,7 @@ VALUES     (@MaterialesOCId,@ClienteId,@RenglonId,@Descripcion,@UnidadMedida,@Pr
                       FacturaImportacion, FechaImportacion, Estado, CantidadRecibida, Moneda)
 VALUES     (@MaterialesOCId,@ClienteId,@RenglonId,@NumeroParte,@CantidadPiezas,@UnidadMedida,@PesoNeto,@PesoBruto,@PaisOrigen,@CantidadBultos,@TipoBulto,@ContenidoTipoBulto,@NumeroGuia,@Marca,@Modelo,@Serie,@enviado,@Descripcion,@Proveedor,@Transportista,@FechaRecibo,@Comentarios,@FacturaImportacion,@FechaImportacion,@Estado,@CantidadRecibida,@Moneda)";
             this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaterialesOCId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MaterialesOCId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaterialesOCId", global::System.Data.SqlDbType.BigInt, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MaterialesOCId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClienteId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RenglonId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeroParte", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroParte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6584,7 +6584,7 @@ SET              MaterialesOCId = @MaterialesOCId, ClienteId = @ClienteId, Rengl
                       FacturaProveedor = @FacturaProveedor
 WHERE     (Id = @Id)";
             this._commandCollection[15].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[15].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaterialesOCId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MaterialesOCId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[15].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaterialesOCId", global::System.Data.SqlDbType.BigInt, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MaterialesOCId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[15].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClienteId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[15].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RenglonId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[15].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeroParte", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NumeroParte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6902,10 +6902,10 @@ WHERE     (Id = @Id)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<decimal> InsertPadre(global::System.Nullable<int> MaterialesOCId, int ClienteId, global::System.Nullable<int> RenglonId, string Descripcion, string UnidadMedida, string Proveedor, string Moneda, global::System.Nullable<int> Consecutivo, global::System.Nullable<decimal> PqOrd, global::System.Nullable<decimal> PqRec, string NombreProveedor) {
+        public virtual global::System.Nullable<decimal> InsertPadre(global::System.Nullable<long> MaterialesOCId, int ClienteId, global::System.Nullable<int> RenglonId, string Descripcion, string UnidadMedida, string Proveedor, string Moneda, global::System.Nullable<int> Consecutivo, global::System.Nullable<decimal> PqOrd, global::System.Nullable<decimal> PqRec, string NombreProveedor) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
             if ((MaterialesOCId.HasValue == true)) {
-                command.Parameters[0].Value = ((int)(MaterialesOCId.Value));
+                command.Parameters[0].Value = ((long)(MaterialesOCId.Value));
             }
             else {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -6991,7 +6991,7 @@ WHERE     (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int InsertQuery(
-                    global::System.Nullable<int> MaterialesOCId, 
+                    global::System.Nullable<long> MaterialesOCId, 
                     int ClienteId, 
                     global::System.Nullable<int> RenglonId, 
                     string NumeroParte, 
@@ -7020,7 +7020,7 @@ WHERE     (Id = @Id)";
                     string Moneda) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[11];
             if ((MaterialesOCId.HasValue == true)) {
-                command.Parameters[0].Value = ((int)(MaterialesOCId.Value));
+                command.Parameters[0].Value = ((long)(MaterialesOCId.Value));
             }
             else {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -7264,7 +7264,7 @@ WHERE     (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int UpdateQuery(
-                    global::System.Nullable<int> MaterialesOCId, 
+                    global::System.Nullable<long> MaterialesOCId, 
                     int ClienteId, 
                     global::System.Nullable<int> RenglonId, 
                     string NumeroParte, 
@@ -7294,7 +7294,7 @@ WHERE     (Id = @Id)";
                     int Id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[15];
             if ((MaterialesOCId.HasValue == true)) {
-                command.Parameters[0].Value = ((int)(MaterialesOCId.Value));
+                command.Parameters[0].Value = ((long)(MaterialesOCId.Value));
             }
             else {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -8070,7 +8070,7 @@ FROM         MaterialesOCMeQ LEFT OUTER JOIN
                       MaterialesOCMeQ.ClienteId = MaterialesMaquinaria.ClienteId AND MaterialesOCMeQ.RenglonId = MaterialesMaquinaria.RenglonId
 WHERE     (MaterialesOCMeQ.Id = @PO) AND (MaterialesOCMeQ.RenglonId = @Linea) AND (MaterialesOCMeQ.ClienteId = 70)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PO", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PO", global::System.Data.SqlDbType.BigInt, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Linea", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -8079,15 +8079,15 @@ WHERE     (MaterialesOCMeQ.Id = @PO) AND (MaterialesOCMeQ.RenglonId = @Linea) AN
 FROM         MaterialesOCMeQ
 WHERE     (Id = @PO) AND (ClienteId = 70)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PO", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PO", global::System.Data.SqlDbType.BigInt, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillbyPO(Maquinaria.MaterialesOCMeQDataTable dataTable, int PO, int Linea) {
+        public virtual int FillbyPO(Maquinaria.MaterialesOCMeQDataTable dataTable, long PO, int Linea) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(PO));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(PO));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Linea));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8099,9 +8099,9 @@ WHERE     (Id = @PO) AND (ClienteId = 70)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Maquinaria.MaterialesOCMeQDataTable GetDataByPO(int PO, int Linea) {
+        public virtual Maquinaria.MaterialesOCMeQDataTable GetDataByPO(long PO, int Linea) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(PO));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(PO));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Linea));
             Maquinaria.MaterialesOCMeQDataTable dataTable = new Maquinaria.MaterialesOCMeQDataTable();
             this.Adapter.Fill(dataTable);
@@ -8111,9 +8111,9 @@ WHERE     (Id = @PO) AND (ClienteId = 70)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPO2(Maquinaria.MaterialesOCMeQDataTable dataTable, int PO) {
+        public virtual int FillByPO2(Maquinaria.MaterialesOCMeQDataTable dataTable, long PO) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(PO));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(PO));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -8124,9 +8124,9 @@ WHERE     (Id = @PO) AND (ClienteId = 70)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Maquinaria.MaterialesOCMeQDataTable GetDataByPO2(int PO) {
+        public virtual Maquinaria.MaterialesOCMeQDataTable GetDataByPO2(long PO) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(PO));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(PO));
             Maquinaria.MaterialesOCMeQDataTable dataTable = new Maquinaria.MaterialesOCMeQDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

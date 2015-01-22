@@ -12,7 +12,7 @@ namespace MaterialCore.MaterialesMQ
     {
         public bool _Resultado = false;
 
-        public int _PO;
+        public Int64 _PO;
         public int _Cliente;
         public int  _Linea;
         public string _NumeroParte;
@@ -44,7 +44,7 @@ namespace MaterialCore.MaterialesMQ
         }
         #endregion
 
-        public LineasPO(int po)
+        public LineasPO(Int64 po)
         {
             InitializeComponent();
             _PO = po;
@@ -68,7 +68,7 @@ namespace MaterialCore.MaterialesMQ
 
         void CargarLineas()
         {
-            this.materialesOCMeQTableAdapter.FillByPO2(this.maquinaria.MaterialesOCMeQ, Convert.ToInt32(txtPO.Text));
+            this.materialesOCMeQTableAdapter.FillByPO2(this.maquinaria.MaterialesOCMeQ, Convert.ToInt64(txtPO.Text));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace MaterialCore.MaterialesMQ
                 
                 
                 
-_PO = Convert.ToInt32(dgvLineas.CurrentRow.Cells["gPO"].Value);
+_PO = Convert.ToInt64(dgvLineas.CurrentRow.Cells["gPO"].Value);
 _Cliente = Convert.ToInt32(dgvLineas.CurrentRow.Cells["gClienteId"].Value);
 _Linea= Convert.ToInt32(dgvLineas.CurrentRow.Cells["gLinea"].Value);
 _NumeroParte = dgvLineas.CurrentRow.Cells["gNoParte"].Value.ToString(); //no nesesaria

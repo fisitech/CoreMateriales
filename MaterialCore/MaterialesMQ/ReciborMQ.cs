@@ -266,7 +266,7 @@ namespace MaterialCore.MaterialesMQ
 
         void InsertMQ()
         {
-            this.materialesMaquinariaTableAdapter.InsertQuery(AInteger(txtOCId.Text),
+            this.materialesMaquinariaTableAdapter.InsertQuery(ALong(txtOCId.Text),
                                                         Convert.ToInt32(cmbCliente.SelectedValue),
                                                         AInteger(txtRenglon.Text),
                                                         txtNoParte.Text,
@@ -311,7 +311,7 @@ namespace MaterialCore.MaterialesMQ
                 _sNoGuia = txtNoGuia.Text;
 
                 this.materialesMaquinariaTableAdapter.UpdateQuery(
-                    AInteger(txtOCId.Text),
+                    ALong(txtOCId.Text),
                                                              Convert.ToInt32(cmbCliente.SelectedValue),
                                                             AInteger(txtRenglon.Text),
                                                             txtNoParte.Text,
@@ -340,7 +340,7 @@ namespace MaterialCore.MaterialesMQ
                                                              Convert.ToInt32(dgbMQ.CurrentRow.Cells["gid"].Value)
                                                              );
 
-                _Bitacora.MeqActualizo( id,Convert.ToInt32 (txtOCId.Text),
+                _Bitacora.MeqActualizo( id,Convert.ToInt64(txtOCId.Text),
                        Convert.ToInt32(txtRenglon.Text), txtNoGuia.Text);
 
                  SelectMeQ();
@@ -364,7 +364,7 @@ namespace MaterialCore.MaterialesMQ
                     _sNoGuia = txtNoGuia.Text;
 
                this.materialesMaquinariaTableAdapter.UpdateQuery(
-                AInteger(txtOCId.Text),
+                ALong(txtOCId.Text),
                                                          Convert.ToInt32(cmbCliente.SelectedValue),
                                                         AInteger(txtRenglon.Text),
                                                         txtNoParte.Text,
@@ -392,7 +392,7 @@ namespace MaterialCore.MaterialesMQ
                                                                   txtFacturaImportacion.Text,
                                                          Convert.ToInt32(dgbMQ.CurrentRow.Cells["gid"].Value)
                                                          );
-               _Bitacora.MeqActualizo(id, Convert.ToInt32(txtOCId.Text),
+               _Bitacora.MeqActualizo(id, Convert.ToInt64(txtOCId.Text),
                           Convert.ToInt32(txtRenglon.Text), txtNoGuia.Text);
 
                SelectMeQ();
@@ -405,7 +405,7 @@ namespace MaterialCore.MaterialesMQ
                 DataSets.Maquinaria.MaterialesOCMeQDataTable tabla = new MaterialCore.DataSets.Maquinaria.MaterialesOCMeQDataTable();
 
                 da.FillbyPO(
-                    tabla, Convert.ToInt32(txtOCId.Text), Convert.ToInt32(txtRenglon.Text));
+                    tabla, Convert.ToInt64(txtOCId.Text), Convert.ToInt32(txtRenglon.Text));
 
                 if (tabla.Rows.Count > 0)
                 {
@@ -426,7 +426,7 @@ namespace MaterialCore.MaterialesMQ
 
 
                         this.materialesMaquinariaTableAdapter.UpdateQuery(
-                                                        AInteger(txtOCId.Text),
+                                                        ALong(txtOCId.Text),
                                                         Convert.ToInt32(cmbCliente.SelectedValue),
                                                         AInteger(txtRenglon.Text),
                                                         txtNoParte.Text,
@@ -454,7 +454,7 @@ namespace MaterialCore.MaterialesMQ
                                                         txtFacturaImportacion.Text,
                                                         Convert.ToInt32(dgbMQ.CurrentRow.Cells["gid"].Value)
                                                          );
-                        _Bitacora.MeqActualizo(id, Convert.ToInt32(txtOCId.Text),
+                        _Bitacora.MeqActualizo(id, Convert.ToInt64(txtOCId.Text),
                                         Convert.ToInt32(txtRenglon.Text), txtNoGuia.Text);
 
                         SelectMeQ(); 
@@ -636,12 +636,24 @@ namespace MaterialCore.MaterialesMQ
 
         Int32? AInteger(string numero)
         {
-            int? resultado;
+            Int32? resultado;
 
             if (numero == "")
                 resultado = null;
             else
                 resultado = Convert.ToInt32(numero);
+
+            return resultado;
+        }
+
+        Int64? ALong(string numero)
+        {
+            Int64? resultado;
+
+            if (numero == "")
+                resultado = null;
+            else
+                resultado = Convert.ToInt64(numero);
 
             return resultado;
         }
@@ -786,40 +798,21 @@ namespace MaterialCore.MaterialesMQ
             if (txtBuscarPO.Text == "0")
             {
 
-         //       int id = Convert.ToInt32(
-         //this.materialesMaquinariaTableAdapter.InsertNulo(Convert.ToInt32(txtConsecutivo1.Text)));
                 string sql = string.Format("Select Identidad =  IDENT_CURRENT('MaterialesMaquinaria')  + 1");
                 datos = conn.getLector(sql);
                 if (datos.Read())
                 {
                     _id_padre = int.Parse(datos["Identidad"].ToString());
                 }
-            
-
-
-               // int id = Convert.ToInt32(this.materialesMaquinariaTableAdapter.GetIdentidad);
-                //this.materialesMaquinariaTableAdapter.InsertNulo(id, Convert.ToInt32(txtConsecutivo1.Text));
-
                 this.materialesMaquinariaTableAdapter.InsertByConsIdPadre(Convert.ToInt32(txtConsecutivo1.Text.Trim()), _id_padre);
-                
-                //Este codigo se supone que actualizaba el campo idPadre despues de insertar, pero el campo no admite null. BUG!!
-                //this.materialesMaquinariaTableAdapter.UpdatePadreID(id);
-
-
-
-
                 SelectMQNoEnviados();
-
                 SeleccionarLinea2(_id_padre);
-
-
-
             }
             else//si es diferente de 0 la po a incresar
             {
 
 
-                MaterialesMQ.LineasPO ven = new LineasPO(Convert.ToInt32(txtBuscarPO.Text));
+                MaterialesMQ.LineasPO ven = new LineasPO(Convert.ToInt64(txtBuscarPO.Text));
                 ven.ShowDialog();
 
 
@@ -859,57 +852,14 @@ namespace MaterialCore.MaterialesMQ
                     txtBuscarPO.SelectAll();
                 }
 
-            /*  DataSets.MaquinariaTableAdapters.MaterialesOCMeQTableAdapter da = new MaterialCore.DataSets.MaquinariaTableAdapters.MaterialesOCMeQTableAdapter();
-                DataSets.Maquinaria.MaterialesOCMeQDataTable tabla = new MaterialCore.DataSets.Maquinaria.MaterialesOCMeQDataTable();
-
-                da.FillbyPO(
-                    tabla, Convert.ToInt32(txtBuscarPO.Text), Convert.ToInt32(txtBuscarLinea.Text));
-
-                if (tabla.Rows.Count > 0)
-                {
-                    if (tabla.Rows[0]["MaterialesMaquinariaID"].ToString() == "0")
-                    {
-                        DataSets.MaquinariaTableAdapters.MaterialesMaquinariaTableAdapter daM = new MaterialCore.DataSets.MaquinariaTableAdapters.MaterialesMaquinariaTableAdapter();
-                        int id;
-                        int PO = Convert.ToInt32(txtBuscarPO.Text);
-                        int Linea = Convert.ToInt32(txtBuscarLinea.Text);
-                        int Cliente = 70;
-
-
-                        id = Convert.ToInt32(daM.InsertPadre(
-                                            PO, Cliente, Linea, tabla.Rows[0]["NumeroParte"].ToString(), tabla.Rows[0]["Descripcion"].ToString(),
-                                            tabla.Rows[0]["UnidadMedida"].ToString(),
-                                            tabla.Rows[0]["ProveedorID"].ToString(),
-                                            tabla.Rows[0]["Moneda"].ToString(), Convert.ToInt32(txtConsecutivo1.Text),
-                                            Convert.ToDecimal(  tabla.Rows[0]["PqOrd"]),
-                                            Convert.ToDecimal(  tabla.Rows[0]["PqRec"]),
-                                            tabla.Rows[0]["NombreProveedor"].ToString()
-                                          ));
-                        SelectMQNoEnviados();
-                        SeleccionarLinea2(id);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Esta PO y linea ya ha sido agregada anteriormente");
-                        txtBuscarPO.Focus();
-                        txtBuscarPO.SelectAll();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No existe la PO y linea");
-                    txtBuscarPO.Focus();
-                    txtBuscarPO.SelectAll();
-                    return;
-                    //borrar textos de POs
-                }*/
+            
             }
             //Busca PO y renglon del tipo MEQ en MaterialesOC
         }
 
         private void txtBuscarPO_TextChanged(object sender, EventArgs e)
         {
-            if (txtBuscarPO.Text.Length >= 6)
+            if (txtBuscarPO.Text.Length >= 10)
             {
                 btnBuscar_Click(0, e);
             }
@@ -924,11 +874,8 @@ namespace MaterialCore.MaterialesMQ
                      (Identificador == Convert.ToInt32(dgbMQ.Rows[i].Cells["gIdentificador"].Value)))
                 {
                     dgbMQ.FirstDisplayedScrollingRowIndex = i;
-                //    dgbMQ.Rows[i].Selected = true;
                     dgbMQ.CurrentCell = dgbMQ[0, i];
-
                     SelectMQbyID();
-
                     return;
                 }
             }
@@ -941,17 +888,10 @@ namespace MaterialCore.MaterialesMQ
             {
                 if ((id == Convert.ToInt32(dgbMQ.Rows[i].Cells["gid"].Value)) )
                 {
-
-
                     dgbMQ.FirstDisplayedScrollingRowIndex = i;
-                    //    dgbMQ.Rows[i].Selected = true;
                     dgbMQ.CurrentCell = dgbMQ[0, i];
-
                     SelectMQbyID();
-
                     txtNoGuia.Focus();
-
-
                     return;
                 }
             }
@@ -965,19 +905,10 @@ namespace MaterialCore.MaterialesMQ
             int po =  Convert.ToInt32(dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gPO"].Value);
             int linea = Convert.ToInt32(dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gLinea"].Value);
             string guia = dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gNoGuia"].Value.ToString();
-
-            
-           //int identificador = Convert.ToInt32(dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gIdentificador"].Value);
-
             id = Convert.ToInt32(this.materialesMaquinariaTableAdapter.InsertHijo(idOrigen));
-
             _Bitacora.MeqInserto(id, po, linea, guia, true);
-
             SelectMeQ();
-        //   SeleccionarLinea(po, linea, identificador);
-           SeleccionarLinea2(id);
-
-         //  SeleccionarLinea(po, linea, identificador, 0);
+            SeleccionarLinea2(id);
         }
 
 
@@ -1385,12 +1316,6 @@ namespace MaterialCore.MaterialesMQ
             }
         }
 
-
-
-
-
-
-
         void ClonarPartida(int id )
         {
             MaterialesMQ.NumClones ventana = new NumClones();
@@ -1411,12 +1336,6 @@ namespace MaterialCore.MaterialesMQ
                 SelectMeQ();
                 SeleccionarLinea2(id);
             }
-
-
-
-
-
-   
         }
 
 
@@ -1438,7 +1357,7 @@ namespace MaterialCore.MaterialesMQ
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MaterialesMQ.LineasPO ven = new LineasPO(Convert.ToInt32(txtBuscarPO.Text));
+            MaterialesMQ.LineasPO ven = new LineasPO(Convert.ToInt64(txtBuscarPO.Text));
             ven.ShowDialog();
 
 
@@ -1451,10 +1370,6 @@ namespace MaterialCore.MaterialesMQ
                 txtBuscarPO.Focus();
                 txtBuscarPO.SelectAll();
             }
-
-
-
-
         }
 
 

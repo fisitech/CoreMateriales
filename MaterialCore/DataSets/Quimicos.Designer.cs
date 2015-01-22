@@ -938,7 +938,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public MaterialesOCRow AddMaterialesOCRow(
-                        int Id, 
+                        long Id, 
                         int ClienteId, 
                         int RenglonId, 
                         string NumeroParte, 
@@ -1006,7 +1006,7 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public MaterialesOCRow FindByIdClienteIdRenglonId(int Id, int ClienteId, int RenglonId) {
+            public MaterialesOCRow FindByIdClienteIdRenglonId(long Id, int ClienteId, int RenglonId) {
                 return ((MaterialesOCRow)(this.Rows.Find(new object[] {
                             Id,
                             ClienteId,
@@ -1066,7 +1066,7 @@ namespace MaterialCore.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
                 this.columnClienteId = new global::System.Data.DataColumn("ClienteId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClienteId);
@@ -1592,9 +1592,9 @@ namespace MaterialCore.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int Id {
+            public long Id {
                 get {
-                    return ((int)(this[this.tableMaterialesOC.IdColumn]));
+                    return ((long)(this[this.tableMaterialesOC.IdColumn]));
                 }
                 set {
                     this[this.tableMaterialesOC.IdColumn] = value;
@@ -3121,7 +3121,7 @@ FROM         MaterialesOC LEFT OUTER JOIN
                 "       (MaterialesOC.Id = @Id) AND (@cerradas = 1)\r\nORDER BY MaterialesOC.Renglo" +
                 "nId";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cerradas", global::System.Data.SqlDbType.Bit, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
@@ -3133,8 +3133,8 @@ FROM         MaterialesOC LEFT OUTER JOIN
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comentario", global::System.Data.SqlDbType.VarChar, 250, global::System.Data.ParameterDirection.Input, 0, 0, "Comentario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bultos", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Bultos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoGuia", global::System.Data.SqlDbType.VarChar, 75, global::System.Data.ParameterDirection.Input, 0, 0, "NoGuia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RenglonId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RenglonId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE    MaterialesOC
@@ -3154,8 +3154,8 @@ WHERE     (Id = @Id) AND (RenglonId = @RenglonId)";
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Moneda", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Moneda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProgramaId", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ProgramaId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoGuia", global::System.Data.SqlDbType.VarChar, 75, global::System.Data.ParameterDirection.Input, 0, 0, "NoGuia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RenglonId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RenglonId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RenglonId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3183,9 +3183,9 @@ WHERE     (Id = @Id) AND (RenglonId = @RenglonId)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillById(Quimicos.MaterialesOCDataTable dataTable, int Id, bool cerradas) {
+        public virtual int FillById(Quimicos.MaterialesOCDataTable dataTable, long Id, bool cerradas) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(Id));
             this.Adapter.SelectCommand.Parameters[1].Value = ((bool)(cerradas));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3197,9 +3197,9 @@ WHERE     (Id = @Id) AND (RenglonId = @RenglonId)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Quimicos.MaterialesOCDataTable GetDataById(int Id, bool cerradas) {
+        public virtual Quimicos.MaterialesOCDataTable GetDataById(long Id, bool cerradas) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(Id));
             this.Adapter.SelectCommand.Parameters[1].Value = ((bool)(cerradas));
             Quimicos.MaterialesOCDataTable dataTable = new Quimicos.MaterialesOCDataTable();
             this.Adapter.Fill(dataTable);
@@ -4041,7 +4041,7 @@ WHERE     (Id = @Id) AND (RenglonId = @RenglonId)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateQuery(global::System.Nullable<decimal> CantidadRecibida, string Comentario, global::System.Nullable<int> Bultos, string NoGuia, int Id, int RenglonId) {
+        public virtual object UpdateQuery(global::System.Nullable<decimal> CantidadRecibida, string Comentario, global::System.Nullable<int> Bultos, string NoGuia, long Id, int RenglonId) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((CantidadRecibida.HasValue == true)) {
                 command.Parameters[0].Value = ((decimal)(CantidadRecibida.Value));
@@ -4067,28 +4067,34 @@ WHERE     (Id = @Id) AND (RenglonId = @RenglonId)";
             else {
                 command.Parameters[3].Value = ((string)(NoGuia));
             }
-            command.Parameters[4].Value = ((int)(Id));
+            command.Parameters[4].Value = ((long)(Id));
             command.Parameters[5].Value = ((int)(RenglonId));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
                 command.Connection.Open();
             }
-            int returnValue;
+            object returnValue;
             try {
-                returnValue = command.ExecuteNonQuery();
+                returnValue = command.ExecuteScalar();
             }
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
             }
-            return returnValue;
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateSoloInfo(string NumeroParte, string Descripcion, string UnidadMedida, string FacturaProveedor, string Pais, string Planta, string Comentario, global::System.Nullable<int> Bultos, string Moneda, string ProgramaId, string NoGuia, int Id, int RenglonId) {
+        public virtual object UpdateSoloInfo(string NumeroParte, string Descripcion, string UnidadMedida, string FacturaProveedor, string Pais, string Planta, string Comentario, global::System.Nullable<int> Bultos, string Moneda, string ProgramaId, string NoGuia, long Id, int RenglonId) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((NumeroParte == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -4156,23 +4162,29 @@ WHERE     (Id = @Id) AND (RenglonId = @RenglonId)";
             else {
                 command.Parameters[10].Value = ((string)(NoGuia));
             }
-            command.Parameters[11].Value = ((int)(Id));
+            command.Parameters[11].Value = ((long)(Id));
             command.Parameters[12].Value = ((int)(RenglonId));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
                 command.Connection.Open();
             }
-            int returnValue;
+            object returnValue;
             try {
-                returnValue = command.ExecuteNonQuery();
+                returnValue = command.ExecuteScalar();
             }
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
             }
-            return returnValue;
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
     }
     
