@@ -902,7 +902,7 @@ namespace MaterialCore.MaterialesMQ
         {
             int id;
             int idOrigen = Convert.ToInt32(dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gid"].Value);
-            int po =  Convert.ToInt32(dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gPO"].Value);
+            long po =  Convert.ToInt64(dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gPO"].Value);
             int linea = Convert.ToInt32(dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gLinea"].Value);
             string guia = dgbMQ.Rows[dgbMQ.CurrentRow.Index].Cells["gNoGuia"].Value.ToString();
             id = Convert.ToInt32(this.materialesMaquinariaTableAdapter.InsertHijo(idOrigen));
